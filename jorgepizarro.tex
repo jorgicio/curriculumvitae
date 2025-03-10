@@ -1,0 +1,132 @@
+%% start of file `template_en.tex'.
+%% Copyright 2006-1008 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage{fullpage}
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{url}
+
+\renewcommand\familydefault{\sfdefault}
+
+%\setlength{\hintscolumnwidth}{3cm}   % if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Jorge}
+\familyname{Pizarro Callejas}
+\title{Jorge Rodrigo Dante Pizarro Callejas}               % optional, remove the line if not wanted
+\address{Peyronet 845-A}{Quilpué, V Región de Valparaíso}    % optional, remove the line if not wanted
+\mobile{+56 9 76247629}                    % optional, remove the line if not wanted
+%\phone{+56 32 2126265}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{jpizarrocallejas@gmail.com}                      % optional, remove the line if not wanted
+\extrainfo{\url{http://www.jorgicio.net}\\Iquique, 17 de Julio de 1986.\\Soltero, sin hijos} % optional, remove the line if not wanted
+\photo[100pt]{jorgicio}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{}                 % optional, remove the line if not wanted
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Formación Académica}
+\cventry{2012-2015}{Educación Superior}{Universidad Técnica Federico Santa María}{Valparaíso}{\textit{Alumno de Ing. Ejecución Informática}}{Titulado}
+\cventry{2005--2011}{Educación Superior}{Universidad Técnica Federico Santa María}{Valparaíso}{\textit{Alumno de Ing. Civil Informática}}{Postergada}  % arguments 3 to 6 are optional
+
+%\section{Master thesis}
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
+
+\section{Experiencia Laboral}
+%\subsection{Laboral}
+%\cventry{2006--2009}{Jornada de Inserción Mechona (JIM)}{Universidad Técnica Federico Santa María}{Valparaíso}{}{Actividades recreativas para recibir alumnos de primer año}                % arguments 3 to 6 are optional
+%\cventry{Ago. 2006}{Mi Primer Paso Empresarial}{Ayudante Charlista}{Valparaíso}{}{Ayudando a niños de escasos recursos para que al adquirir su primer emprendimiento, puedan desenvolverse mejor en el ámbito laboral}                % arguments 3 to 6 are optional
+%\cventry{Ene. 2009}{Inventario}{Supermercado Líder}{Ovalle}{}{Realizar un inventario de los productos que llegan al supermercado por una noche}
+%\cventry{May. 2010 - May. 2012}{Oficina de Servicios Integrados (OSI)}{Universidad Técnica Federico Santa María}{Valparaíso}{}{Personal, sacando fotocopias, impresiones y vendiendo artículos de librería. Cajero desde Julio del 2011.}
+
+%\subsection{Laboral}
+
+\cventry{Oct. 2021 - actualidad}{Ingeniero en desarrollo Junior}{Waypoint Telecomunicaciones}{Santiago (Remoto por pandemia)}{}{Ingeniero en desarrollo aplicando conocimientos de DevOps en el área de soportev.}
+\cventry{Dic. 2019}{Desarrollador Frontend}{Innovación y Proyectos Kimun Ltda.}{Temuco (Freelance)}{}{Desarrollo a nivel de frontend para la plataforma web ``Mundo de Vegetales'', trabajando a partir de un proyecto ya existente.}
+\cventry{Oct. 2016}{Desarrollador Wordpress}{Serakin}{Viña del Mar}{}{Desarrollador del sitio web de Serakin, un centro kinesiológico.}
+\cventry{Oct. - Dic. 2015}{Desarrollador Frontend}{Everis}{Santiago}{}{Desarrollador (freelance y en oficina) de la página de Consorcio (panel del cliente), del lado del diseño frontend, utilizando jQuery y Bootstrap.}
+\cventry{Sep. 2015}{Asistente técnico}{Microdatos}{Viña del Mar}{}{Asistente técnico encargado del área informática y apoyo para tomar la prueba PISA (\textbf{P}rogramme for \textbf{I}nternational \textbf{S}tudent \textbf{A}ssessment)}
+\cventry{Sep. 2014 - Abr. 2015}{Programador web}{Pontificia Universidad Católica de Valparaíso - Campus Sausalito}{Viña del Mar}{}{Desarrollo (continuación) de un sistema informático de aprendizaje de Inglés para el proyecto Conicyt.}
+\cventry{Mar. 2013 -- Ene. 2014}{Programador web}{Oxalix}{Viña del Mar - Concón}{}{Desarrollo de formularios para el sitio de Oxalix, en Python usando Django como framework, y HTML. Encargado del área de programación.}
+\cventry{Oct. - Nov. 2011}{SysAdmin/Webmaster}{Guides.cl}{Santiago}{}{Migración de un hosting a otro y encargado de la administración y mantenimiento del sitio. Está hecho bajo la plataforma Joomla. El trabajo lo hice como freelance.}
+\cventry{Jun. 2011 - Mar. 2014}{Programador web y encargado del área de informática}{DelPuerto Comunicaciones}{Valparaíso}{}{Agencia de comunicaciones que ofrece servicios de diseño web. Cumpliendo el rol de programador. Práctica profesional de 360 horas en la oficina de Junio a Sept, y desde entonces, trabajando de planta. Posteriormente, freelance on-demand. Actualmente en standby.}
+\cventry{Abr. - Jul. 2010}{Desarrollador web}{PreUSM, Universidad Técnica Federico Santa María}{Valparaíso}{}{Desarrollo y mantenimiento de la página web del Preuniversitario Solidario PreUSM, encargado de la funcionalidad y en parte, del diseño.}
+\cventry{2008}{Jefe de documentación y desarrollador web}{Feria de Software 2008, Universidad Técnica Federico Santa María}{Valparaíso}{}
+{Formar parte del equipo de desarrollo del producto ``Motion Prisma'', software orientado como
+guía automatizado para buses, desarrollado bajo plataforma GNU/Linux en Python usando librería QT.
+Representando a la pre-empresa ``Phoenix`` por los ramos ''Ingeniería de Software`` y
+``Taller de Desarrollo de Software'' de la UTFSM. El evento fue realizado en la Escuela Militar,
+en Santiago.}
+\cventry{Oct. 2007}{Desarrollador web}{Feria de Software 2007, Universidad Técnica Federico Santa María}{Valparaíso}{}{Desarrollo de una plataforma web para un sistema
+de encuestas donde los invitados pueden votar por sus productos preferidos en distintas categorías.
+Desarrollado en PHP y MySQL.}% arguments 3 to 6 are optional
+
+%\section{Languages}
+%\subsection{meow}
+%\cvlanguage{language 1}{Skill level}{}
+%\cvlanguage{language 2}{Skill level}{}
+%\cvlanguage{language 3}{Skill level}{}
+
+\section{Habilidades informáticas}
+\cvcomputer{\textbf{Lenguajes}}{C, C++, Java, PHP, Perl, Python, Ruby, Shell, Scala, JavaScript, NodeJS}
+{\textbf{Bases de\\Datos}}{MySQL, PostgreSQL}
+%\cvcomputer{\textbf{Sistemas Operativos}}{Microsoft Windows, GNU/Linux: SuSe, Ubuntu, Debian, Slackware, Arch Linux, y actualmente, Gentoo}
+%{\textbf{Programas}}{Suite Ofimática (MS Office, Openoffice), Adobe Dreamweaver, Gimp, Inkscape, Netbeans, Eclipse, Kile, \LaTeX, Android Studio}
+\cvcomputer{\textbf{Otros}}{Desarrollo web (\textit{backend} y \textit{frontend}), aplicaciones móviles Android, \LaTeX}
+{\textbf{}}{}
+
+
+\section{Idiomas}
+\cvline{Español}{Escrito y hablado (Nivel Avanzado). Lengua materna}
+\cvline{Inglés}{Escrito y hablado (Nivel Avanzado)}
+
+\section{Enlaces}
+\cvline{Sitio web personal}{\url{http://www.jorgicio.net}}
+\cvline{LinkedIn}{\url{https://www.linkedin.com/in/jorgepizarrocallejas}}
+\cvline{GitHub}{\url{https://github.com/jorgicio}}
+
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+
+%\section{Extra 2}
+%\cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
+%\cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
+%\cvlistdoubleitem[\Neutral]{Item 3}{}
+
+% Publications from a BibTeX file
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+\vspace*{\fill}\hspace{\fill}JRDPC/\LaTeXe
+\end{document}
+
+
+%% end of file `template_en.tex'.

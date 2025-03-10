@@ -1,0 +1,131 @@
+%% start of file `template_en.tex'.
+%% Copyright 2006-1008 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[orange]{classic}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage{fullpage}
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{url}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Jorge}
+\familyname{Pizarro}
+\title{Jorge Rodrigo Dante Pizarro Callejas}               % optional, remove the line if not wanted
+\address{Desiderio Guzmán 138, Villa Dulce Crav}{Viña del Mar,V Región}    % optional, remove the line if not wanted
+\mobile{+56 9 76247629}                    % optional, remove the line if not wanted
+\phone{+56 32 2853719}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{jpizarro@inf.utfsm.cl}                      % optional, remove the line if not wanted
+\extrainfo{\url{http://www.jorgicio.net}\\Iquique, 17 de Julio de 1986.\\Soltero, sin hijos} % optional, remove the line if not wanted
+\photo[100pt]{jorgicio}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+\quote{Persona proactiva, autodidacta y perseverante}                 % optional, remove the line if not wanted
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Formación Académica}
+\cventry{2012--a la fecha}{Educación Superior}{Universidad Técnica Federico Santa María}{Valparaíso}{\textit{Alumno de Ing. Ejecución Informática}}{Cursando actualmente, \textit{ad portas} de egresar y titularme}
+\cventry{2005--2011}{Educación Superior}{Universidad Técnica Federico Santa María}{Valparaíso}{\textit{Alumno de Ing. Civil Informática}}{Postergada hasta nuevo aviso}  % arguments 3 to 6 are optional
+\cventry{2001--2004}{Educación Media}{Colegio Pucará}{Ovalle}{}{}  % arguments 3 to 6 are optional
+
+%\section{Master thesis}
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
+
+\section{Experiencias}
+\subsection{Laboral}
+\cventry{2006--a la fecha}{Jornada de Inserción Mechona (JIM)}{Universidad Técnica Federico Santa María}{Valparaíso}{}{Actividades recreativas para recibir alumnos de primer año}                % arguments 3 to 6 are optional
+\cventry{Ago. 2006}{Mi Primer Paso Empresarial}{Ayudante Charlista}{Valparaíso}{}{Ayudando a niños de escasos recursos para que al adquirir su primer emprendimiento, puedan desenvolverse mejor en el ámbito laboral}                % arguments 3 to 6 are optional
+\cventry{Ene. 2009}{Inventario}{Supermercado Líder}{Ovalle}{}{Realizar un inventario de los productos que llegan al supermercado por una noche}
+\cventry{May. 2010--a la fecha}{Oficina de Servicios Integrados (OSI)}{Universidad Técnica Federico Santa María}{Valparaíso}{}{Personal, sacando fotocopias, impresiones y vendiendo artículos de librería. Cajero desde Julio del 2011.}
+\subsection{Laboral Informática}
+\cventry{Oct. 2007}{Desarrollador web}{Feria de Software 2007, Universidad Técnica Federico Santa María}{Valparaíso}{}{Desarrollo de una plataforma web para un sistema
+de encuestas donde los invitados pueden votar por sus productos preferidos en distintas categorías.
+Desarrollado en PHP y MySQL.}% arguments 3 to 6 are optional
+\cventry{2008}{Jefe de documentación y desarrollador web}{Feria de Software 2008, Universidad Técnica Federico Santa María}{Valparaíso}{}
+{Formar parte del equipo de desarrollo del producto ``Motion Prisma'', software orientado como
+guía automatizado para buses, desarrollado bajo plataforma GNU/Linux en Python usando librería QT.
+Representando a la pre-empresa ``Phoenix`` por los ramos ''Ingeniería de Software`` y
+``Taller de Desarrollo de Software'' de la UTFSM. El evento fue realizado en la Escuela Militar,
+en Santiago.}
+\cventry{Abr. 2010--Jul. 2010}{Desarrollador web}{PreUSM, Universidad Técnica Federico Santa María}{Valparaíso}{}{Desarrollo y mantenimiento de la página web del Preuniversitario Solidario PreUSM, encargado de la funcionalidad y en parte, del diseño.}
+\cventry{Jun. 2011 -- a la fecha}{Programador web y encargado del área de informática}{DelPuerto Comunicaciones}{Valparaíso}{}{Agencia de comunicaciones que ofrece servicios de diseño web. Cumpliendo el rol de programador. Práctica profesional de 360 horas en la oficina de Junio a Sept, y desde entonces, trabajando de planta. Actualmente, freelance on-demand.}
+\cventry{Oct. - Nov. 2011}{SysAdmin/Webmaster}{Guides.cl}{Santiago}{}{Migración de un hosting a otro y encargado de la administración y mantenimiento del sitio. Está hecho bajo la plataforma Joomla. El trabajo lo hice como freelance.}
+\cventry{Mar. 2013 -- a la fecha}{Programador web}{Oxalix}{Viña del Mar - Concón}{}{Desarrollo de formularios para el sitio de Oxalix, en Python usando Django como framework, y HTML. Encargado del área de programación.}
+%\section{Languages}
+%\subsection{meow}
+%\cvlanguage{language 1}{Skill level}{}
+%\cvlanguage{language 2}{Skill level}{}
+%\cvlanguage{language 3}{Skill level}{}
+
+\section{Habilidades informáticas}
+\cvcomputer{\textbf{Lenguajes}}{C (Nivel Medio-Avanzado), C++ (Nivel Medio), Java (Medio), PHP (Avanzado), Perl (Medio), MATLAB (Medio), Python (Avanzado), C\# (Medio),
+UML (Medio), Scheme (Básico), Bash y Shell (Avanzado), \LaTeX (Avanzado)}
+{\textbf{Bases de\\Datos}}{MySQL, PostgreSQL}
+\cvcomputer{\textbf{Sistemas Operativos}}{Microsoft Windows, GNU/Linux: SuSe, Ubuntu, Debian, Slackware y actualmente, Arch Linux}
+{\textbf{Programas}}{Suite Ofimática (MS Office, Openoffice), Adobe Dreamweaver, Gimp, Inkscape, Netbeans, Eclipse, Kile, \LaTeX}
+\cvcomputer{\textbf{Plataformas Web}}{Wordpress, Joomla, Django, CakePHP}
+{\textbf{Desarrollo de aplicaciones móviles}}{Android. Hice un simulador de puntajes de la UTFSM, no oficial.}
+
+
+\section{Méritos Académicos}
+\cventry{1992--1998}{Escuela José Tomás Ovalle}{Ovalle}{}{}{Excelencia académica}
+\cventry{1999--2004}{Colegio Pucará}{Ovalle}{}{}{Excelencia académica}
+\cventry{1994--1996}{Concurso de Ortografía a nivel comunal}{Ovalle}{}{}{Campeón por 3 años consecutivos}
+\cventry{2003}{Concurso de Ortografía a nivel interescolar, comunal y regional}{Ovalle}{IV Región de Coquimbo}{}{Campeón en esos 3 niveles}
+\cventry{2003}{Concurso Nacional de Ortografía ``Por un Chile bien escrito''}{Palacio de la Moneda}{Santiago}{}{Representando a la IV Región de Coquimbo}
+
+
+\section{Idiomas}
+\cvline{Español}{Escrito y hablado (Nivel Avanzado). Lengua materna}
+\cvline{Inglés}{Escrito y hablado (Nivel Avanzado)}
+\cvline{Alemán}{Escrito (Básico-Medio)}
+
+%\section{Hobby}
+%\cvline{Guitarrista}{\small Nivel medio-avanzado de Guitarra Clásica y Eléctrica}
+%\cvline{Fotografía}{\small Tomar fotos como medio de ocio o de arte}
+%\cvline{Dibujante}{\small Bocetos, dibujos abstractos y varios}
+
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+
+%\section{Extra 2}
+%\cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
+%\cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
+%\cvlistdoubleitem[\Neutral]{Item 3}{}
+
+% Publications from a BibTeX file
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+\vspace*{\fill}\hspace{\fill}JRDPC/\LaTeXe
+\end{document}
+
+
+%% end of file `template_en.tex'.
