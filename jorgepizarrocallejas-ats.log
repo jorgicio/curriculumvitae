@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Arch Linux) (preloaded format=pdflatex 2025.3.10)  12 MAR 2025 01:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Arch Linux) (preloaded format=pdflatex 2025.3.10)  12 MAR 2025 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1102,31 +1102,39 @@ LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
 
 
 LaTeX Font Warning: Font shape `T1/cmr/b/sc' undefined
-(Font)              using `T1/cmr/bx/sc' instead on input line 200.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
-(Font)              using `T1/cmr/bx/it' instead on input line 204.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
-(Font)              using `T1/cmr/bx/it' instead on input line 217.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
-(Font)              using `T1/cmr/bx/it' instead on input line 228.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
-(Font)              using `T1/cmr/bx/it' instead on input line 238.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
-(Font)              using `T1/cmr/bx/it' instead on input line 249.
+(Font)              using `T1/cmr/bx/sc' instead on input line 159.
 
 
 LaTeX Font Warning: Font shape `T1/cmr/b/sc' undefined
-(Font)              using `T1/cmr/bx/sc' instead on input line 268.
+(Font)              using `T1/cmr/bx/sc' instead on input line 208.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 212.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 226.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 237.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 247.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 258.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 268.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 279.
 
 
 
@@ -1141,23 +1149,59 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 /enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/font
 awesome5/fa5free2.enc}{/usr/share/texmf-dist/fonts/enc/dvips/fontawesome5/fa5br
 ands0.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/t
-exmf-dist/fonts/enc/dvips/cfr-lm/t1-clm.enc}] (./jorgepizarrocallejas-ats.aux)
+exmf-dist/fonts/enc/dvips/cfr-lm/t1-clm.enc}]
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 290.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 301.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/sc' undefined
+(Font)              using `T1/cmr/bx/sc' instead on input line 314.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 319.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 330.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/it' undefined
+(Font)              using `T1/cmr/bx/it' instead on input line 345.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/b/sc' undefined
+(Font)              using `T1/cmr/bx/sc' instead on input line 363.
+
+
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 4.08003pt, for example:
+(fancyhdr)                \setlength{\footskip}{4.08003pt}.
+
+[2] (./jorgepizarrocallejas-ats.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `jorgepizarrocallejas-ats.out' has not change
 d.
-(rerunfilecheck)             Checksum: B8FE4CD1AD814ABF0D8A96935F287693;434.
+(rerunfilecheck)             Checksum: B6893A3F027AA85D72B863BC25FC6577;806.
  ) 
 Here is how much of TeX's memory you used:
- 33048 strings out of 475171
- 663218 string characters out of 5767103
- 1162063 words of memory out of 5000000
- 55490 multiletter control sequences out of 15000+600000
+ 33053 strings out of 475171
+ 663264 string characters out of 5767103
+ 1172064 words of memory out of 5000000
+ 55492 multiletter control sequences out of 15000+600000
  595135 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 102i,11n,106p,1263b,447s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,11n,106p,1263b,779s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Reg
 ular.pfb></usr/share/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Fre
 e-Solid.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share
@@ -1169,10 +1213,10 @@ f-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-s
 uper/sfrm1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti0900.p
 fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on jorgepizarrocallejas-ats.pdf (1 page, 207726 bytes).
+Output written on jorgepizarrocallejas-ats.pdf (2 pages, 235737 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 197 words of extra memory for PDF output out of 10000 (max. 10000000)
 
