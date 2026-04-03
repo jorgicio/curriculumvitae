@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.12)  2 APR 2026 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.12)  2 APR 2026 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -441,12 +441,12 @@ Here is how much of TeX's memory you used:
  32207 multiletter control sequences out of 15000+600000
  603392 words of font info for 60 fonts, out of 8000000 for 9000
  773 hyphenation exceptions out of 8191
- 75i,9n,79p,253b,549s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,253b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb>
-Output written on jorgepizarrocallejas-ats-en.pdf (2 pages, 164596 bytes).
+Output written on jorgepizarrocallejas-ats-en.pdf (2 pages, 164858 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
