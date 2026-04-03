@@ -1,414 +1,189 @@
-   %-------------------------
-% Resume in Latex
-% Author
-% License : MIT
-%------------------------
-
-%---- Required Packages and Functions ----
+%% jorge_pizarro_cv_ats.tex
+%% Compilar con: pdflatex jorge_pizarro_cv_ats.tex
+%% Requiere paquetes: geometry, titlesec, enumitem, hyperref, fontenc, inputenc
 
 \documentclass[a4paper,11pt]{article}
-\usepackage{latexsym}
-\usepackage{xcolor}
-\usepackage{float}
-\usepackage{ragged2e}
-\usepackage[empty]{fullpage}
-\usepackage{wrapfig}
-\usepackage{lipsum}
-\usepackage{tabularx}
-\usepackage{titlesec}
-\usepackage{geometry}
-\usepackage{marvosym}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\usepackage{graphicx}
-\usepackage{cfr-lm}
+
+% ── Codificación y fuente ──────────────────────────────────────
 \usepackage[T1]{fontenc}
-\setlength{\multicolsep}{0pt} 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
-% Adjust margins
-%\addtolength{\oddsidemargin}{-0.5in}
-%\addtolength{\evensidemargin}{-0.5in}
-%\addtolength{\textwidth}{1in}
-\usepackage[most]{tcolorbox}
-\tcbset{
-	frame code={}
-	center title,
-	left=0pt,
-	right=0pt,
-	top=0pt,
-	bottom=0pt,
-	colback=gray!20,
-	colframe=white,
-	width=\dimexpr\textwidth\relax,
-	enlarge left by=-2mm,
-	boxsep=4pt,
-	arc=0pt,outer arc=0pt,
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% ── Márgenes ──────────────────────────────────────────────────
+\usepackage[top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}
+
+% ── Colores ───────────────────────────────────────────────────
+\usepackage[dvipsnames]{xcolor}
+\definecolor{azulcv}{HTML}{1F4E79}
+\definecolor{gris}{HTML}{555555}
+\definecolor{grisCLaro}{HTML}{AAAAAA}
+
+% ── Tipografía de sección ──────────────────────────────────────
+\usepackage{titlesec}
+\titleformat{\section}
+  {\color{azulcv}\normalfont\bfseries\large}
+  {}{0em}
+  {\MakeUppercase}
+  [{\color{azulcv}\vspace{2pt}\hrule height 0.8pt\vspace{4pt}}]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+
+% ── Listas ────────────────────────────────────────────────────
+\usepackage{enumitem}
+\setlist[itemize]{
+  leftmargin=1.4em,
+  topsep=2pt,
+  itemsep=2pt,
+  parsep=0pt,
+  label={\textbullet}
 }
 
-\urlstyle{same}
+% ── Hiperlinks ────────────────────────────────────────────────
+\usepackage[hidelinks]{hyperref}
 
-\raggedright
-\setlength{\tabcolsep}{0in}
+% ── Sin sangría, espaciado entre párrafos ──────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+% ── Tabla para alinear fechas a la derecha ────────────────────
+\usepackage{tabularx}
+\usepackage{array}
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item{
-    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
-  }
+% ── Sin numeración de página ──────────────────────────────────
+\pagestyle{empty}
+
+% ─────────────────────────────────────────────────────────────
+% Comandos personalizados
+% ─────────────────────────────────────────────────────────────
+
+% Entrada de experiencia: {Título}{Empresa}{Ubicación}{Fechas}
+\newcommand{\entrada}[4]{%
+  \vspace{6pt}
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} \textcolor{gris}{· #2} & \textcolor{grisCLaro}{\small\textit{#4}} \\
+    \textcolor{grisCLaro}{\small\textit{#3}} & \\
+  \end{tabularx}
+  \vspace{2pt}
 }
 
-\newcommand{\resumePOR}[3]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
-    \end{tabular*}
-    \vspace{-2mm}
+% Entrada de proyecto: {Nombre}{Tecnologías}
+\newcommand{\proyecto}[2]{%
+  \vspace{6pt}
+  \textbf{#1} \quad \textcolor{gris}{\small\textit{| #2}}
+  \vspace{2pt}
 }
 
-\newcommand{\resumeSubheading}[4]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#4}} \\
-        \textit{\textbf {\footnotesize{#3}}} &  \footnotesize{#2}\\
-    \end{tabular*}
-    \vspace{-2.4mm}
+% Fila de habilidad: {Etiqueta}{Contenido}
+\newcommand{\habilidad}[2]{%
+  \textbf{#1:} #2 \\[2pt]
 }
 
-\newcommand{\resumeProject}[4]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#3}} \\
-        \footnotesize{\textit{#2}} & \footnotesize{#4}
-    \end{tabular*}
-    \vspace{-2.4mm}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-% \renewcommand{\labelitemii}{$\circ$}
-\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
-\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
-\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
-\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
-\newcommand{\cvsection}[1]{%
-\vspace{2mm}
-\begin{tcolorbox}
-    \textbf{\large #1}
-\end{tcolorbox}
-    \vspace{-4mm}
-}
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
-\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
-\newcolumntype{C}{>{\centering\arraybackslash}X}%
-%---- End of Packages and Functions ------
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%
-%%%%%% DEFINE ELEMENTS HERE %%%%%%%
-\newcommand{\name}{Jorge Pizarro Callejas} % Your Name
-\newcommand{\course}{Ingeniero en Ejec. Informática} % Your Program
-\newcommand{\roll}{Quilpué, Chile} % Your Roll No.
-\newcommand{\phone}{976247629} % Your Phone Number
-\newcommand{\emaila}{jpizarrocallejas@gmail.com} %Email 1
-
+% ─────────────────────────────────────────────────────────────
 \begin{document}
-\fontfamily{cmr}\selectfont
-%----------HEADING-----------------
+% ─────────────────────────────────────────────────────────────
 
-{
-\begin{tabularx}{\linewidth}{L r} \\
-  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +56 \phone}\\
-  {\roll } & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
-  Ing. Ejecución Informática & \href{https://github.com/jorgicio}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {https://github.com/jorgicio}} \\  
-  {Universidad Técnica Federico Santa María, Valparaíso, Chile} & \href{https://www.linkedin.com/in/jorgepizarrocallejas/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {https://linkedin.com/in/jorgepizarrocallejas}}
-\end{tabularx}
-}
+% ── ENCABEZADO ────────────────────────────────────────────────
+\begin{center}
+  {\Huge\bfseries\color{azulcv} Jorge Pizarro Callejas} \\[6pt]
+  {\large\color{gris} Ingeniero de Software \textbar{} Desarrollo Web \& Cloud} \\[6pt]
+  {\small\color{gris}
+    +56 976247629 \;·\;
+    \href{mailto:jpizarrocallejas@gmail.com}{jpizarrocallejas@gmail.com} \;·\;
+    \href{https://linkedin.com/in/jorgepizarrocallejas}{linkedin.com/in/jorgepizarrocallejas} \;·\;
+    \href{https://github.com/jorgicio}{github.com/jorgicio} \;·\;
+    Quilpué, Chile
+  }
+\end{center}
 
+\vspace{4pt}
 
-%-----------EDUCATION-----------
-\section{\textbf{Educación}}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Ingeniería en Ejecución Informática}{Titulado}
-      {Universidad Técnica Federico Santa María}{2012-2015}
-    \resumeSubheading
-      {Ingeniería Civil en Informática}{Postergada}
-      {Universidad Técnica Federico Santa María}{2005-2011}
-  \resumeSubHeadingListEnd
-\vspace{-5.5mm}
-%
-%-----------PROJECTS-----------------
+% ── PERFIL PROFESIONAL ────────────────────────────────────────
+\section{Perfil Profesional}
 
-\section{\textbf{Proyectos Personales}}
-\resumeSubHeadingListStart
-    \resumeProject
-      {Sitio web personal} %Project Name
-      {Mi sitio web personal con mi carta de presentación y blog} %Project Name, Location Name
-      {} %Event Dates
+Ingeniero de Ejecución en Informática con más de 10 años de experiencia en desarrollo de
+software, especializado en aplicaciones web, servicios cloud (AWS) y automatización backend.
+Experiencia comprobada en arquitecturas serverless con AWS Lambda, CI/CD con Jenkins, y
+desarrollo fullstack con Java, Node.js, Angular y Vue.js. Orientado a la calidad del código,
+trabajo en equipo remoto y resolución de problemas técnicos complejos.
 
-      \resumeItemListStart
-        \item {Una nueva versión de mi sitio web personal.}
-        \item {Se pretende tener una tarjeta de presentación con portafolio.}
-        \item {Tecnología usada: Vue.js con Tailwind CSS para el frontend. Para el backend se usó GraphQL.}
-        \item {Actualmente en desarrollo.}
-    \resumeItemListEnd
-    \vspace{-2mm}
-    
-    \resumeProject
-      {Blog en inglés} %Project Name
-      {Un blog creado en inglés con Python y Pelican } %Project Name, Location Name
-      {} %Event Dates
+% ── HABILIDADES TÉCNICAS ──────────────────────────────────────
+\section{Habilidades Técnicas}
 
-      \resumeItemListStart
-        \item {Un blog en inglés creado con un generador de contenidos estático como Pelican en Python.}
-    \resumeItemListEnd
-    \vspace{-2mm}
+\habilidad{Lenguajes}{Java, JavaScript (Node.js), Python, PHP, C/C++, HTML5, CSS3, SQL}
+\habilidad{Frameworks y librerías}{Angular, Vue.js, Django, Bootstrap, Tailwind CSS, Ionic, Expo Go}
+\habilidad{Cloud y DevOps}{AWS Lambda, AWS CloudFormation, AWS CodeCommit, AWS CloudWatch, AWS DynamoDB, AWS Athena, Docker, Jenkins (CI/CD), SonarQube}
+\habilidad{Bases de datos}{PostgreSQL, MySQL, AWS DynamoDB, AWS Athena}
+\habilidad{Herramientas}{Git, GitHub, GitLab, VS Code, Linux, \LaTeX}
+\habilidad{Metodologías}{CI/CD, control de versiones, QA automatizado, desarrollo remoto}
 
-    \resumeProject
-      {Indicadores Económicos en Telegram} %Project Name
-      {Un bot para Telegram que muestra los indicadores económicos del momento.} %Project Name, Location Name
-      {} %Event Dates
+% ── EXPERIENCIA LABORAL ───────────────────────────────────────
+\section{Experiencia Laboral}
 
-      \resumeItemListStart
-        \item {Un bot en Telegram que responde a ciertos comandos para mostrar los indicadores económicos requeridos usando la API de mindicador.cl.}
-        \item {Tecnología usada: Node.js, API}
-    \resumeItemListEnd
+\entrada{Ingeniero de Software Junior}{Tranciti (Waypoint Telecomunicaciones)}{Santiago, Chile (Remoto)}{Oct. 2021 -- Ene. 2025}
+\begin{itemize}
+  \item Desarrollo de microservicios y funciones serverless con AWS Lambda en Java y Node.js para una plataforma de geolocalización GPS.
+  \item Implementación de infraestructura como código (IaC) con AWS CloudFormation y automatización de despliegues con Jenkins y AWS CodePipeline.
+  \item Gestión de calidad de código con SonarQube e integración de Docker para entornos de desarrollo reproducibles.
+  \item Desarrollo de módulo frontend para clientes en Angular, y soporte a apps móviles con Titanium, Ionic y Expo Go.
+  \item Uso de PostgreSQL y AWS DynamoDB/Athena como motores de base de datos según el tipo de carga.
+\end{itemize}
 
-	\resumeProject
-      {Tomython} %Project Name
-      {Un reloj pomodoro que usa Pynotify y pygtk.} %Project Name, Location Name
-      {} %Event Dates
+\entrada{Desarrollador Frontend}{Innovación y Proyectos Kimun Ltda.}{Temuco (Freelance Remoto)}{Dic. 2019}
+\begin{itemize}
+  \item Desarrollo y mejora del frontend de la plataforma web ``Mundo de vegetales'' utilizando HTML5, CSS3 y JavaScript.
+\end{itemize}
 
-      \resumeItemListStart
-        \item {Un notificador que aprovecha el método Pomodoro para recordatorios usando las notificaciones nativas de Linux.}
-        \item {Tecnología usada: Python, PyGTK, Gstreamer}
-    \resumeItemListEnd
-      
-  \resumeSubHeadingListEnd
-\vspace{-8.5mm}
+\entrada{Desarrollador Web}{Pontificia Universidad Católica de Valparaíso}{Viña del Mar}{Sep. 2014 -- Abr. 2015}
+\begin{itemize}
+  \item Continuación del desarrollo de un sistema de aprendizaje de inglés para proyecto Conicyt usando PHP, jQuery y MySQL.
+\end{itemize}
 
-%-----------EXPERIENCE-----------------
-\section{\textbf{Experiencia laboral}}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Ingeniero de software junior}{Santiago de Chile (Remoto)}
-      {Tranciti (Waypoint Telecomunicaciones)}{Oct. 2021 - Ene. 2025}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Empresa dedicada a proveer servicios informáticos orientados a la geolocalización de equipos GPS.}
-    \item {Desarrollo de proyectos usando las tecnologías de AWS, principalmente Lambda, Codecommit, Cloudformation, Cloudwatch, etc.}
-    \item {Casi todos los proyectos desarrollados fueron en Java, aunque también se usó Node.js para algunas lambdas.}
-    \item {También se usaron herramientas complementarias como Docker, AWS CLI, Jenkinks para CI/CD, y SonarQube para QA. Para base de datos, se usó PostgreSQL.}
-    \item {Algunos componentes como la app web para clientes requirieron el uso de Angular; y Titanium, Ionic y Expo Go para app móviles. }
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-    
-    \resumeSubheading
-      {Desarrollador Frontend}{Temuco (Freelance remoto)}
-      {Innovación y Proyectos Kimun Ltda.}{Dic. 2019}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Desarrollo del frontend para la plataforma web "Mundo de vegetales" a partir de un proyecto ya existente.}
-    \item {Tecnologías utilizadas: HTML5, CSS3 y JavaScript.}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-    
-    \resumeSubheading
-      {Desarrollador WordPress}{Viña del Mar (Freelance)}
-      {Serakin}{Oct. 2016}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Desarrollo del sitio web de Serakin, un centro kinesiológico, enteramente con WordPress.}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-    
-    \resumeSubheading
-      {Desarrollador Frontend}{Santiago (híbrido)}
-      {Everis}{Oct. 2015 - Dic. 2015}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Desarrollo del frontend del panel del cliente del sitio web de Consorcio.}
-    \item {Tecnologías utilizadas: Bootstrap y jQuery.}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-    
-    \resumeSubheading
-      {Asistente técnico}{Viña del Mar}
-      {Microdatos}{Sept. 2015}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Encargado del área informática y apoyo para tomar la prueba PISA (\textbf{P}rogramme for \textbf{I}nternational \textbf{S}tudent \textbf{A}ssessment)}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-    
-    \resumeSubheading
-      {Desarrollador Web}{Viña del Mar}
-      {Pontificia Universidad Católica de Valparaíso, Campus Sausalito}{Sep. 2014 - Abr. 2015}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Desarrollo (continuación) de un sistema informático de aprendizaje de Inglés para el proyecto Conicyt.}
-    \item {Tecnologías utilizadas: PHP, HTML, jQuery y MySQL.}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-    
-    \resumeSubheading
-      {Desarrollador Web}{Viña del Mar - Concón}
-      {Oxalix}{Mar. 2013 - Ene. 2014}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Desarrollo de formularios para el sitio de Oxalix, en Python usando Django como framework, y HTML. Encargado del área de programación.}
-    \item {Tecnologías utilizadas: Python, Django y MySQL.}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-    
-    \resumeSubheading
-      {Sysadmin/Webmaster y Desarrollador Web}{Santiago (Freelance)}
-      {Guides.cl}{Oct. 2011 - Nov. 2011}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Migración de un hosting a otro y encargado de la administración y mantenimiento del sitio.}
-    \item {Tecnologías utilizadas: Joomla}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-    
-    \resumeSubheading
-      {Desarrollador Web y encargado del área de informática}{Valparaíso}
-      {Del Puerto Comunicaciones}{Jun. 2011 - Mar. 2014}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Agencia de comunicaciones que ofrece servicios de diseño web. Cumpliendo el rol de programador. Práctica profesional de 360 horas en la oficina de Junio a Sept, y posteriormente, trabajando de planta.}
-    \item {Tecnologías utilizadas: WordPress, HTML, CSS y jQuery.}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
-         
-  \resumeSubHeadingListEnd
-\vspace{-5.5mm}
+\entrada{Desarrollador Web}{Oxalix}{Viña del Mar}{Mar. 2013 -- Ene. 2014}
+\begin{itemize}
+  \item Desarrollo de formularios y módulos web con Python y Django como framework, integrando base de datos MySQL.
+\end{itemize}
 
+\entrada{Desarrollador Web y Encargado de Informática}{Del Puerto Comunicaciones}{Valparaíso}{Jun. 2011 -- Mar. 2014}
+\begin{itemize}
+  \item Desarrollo y mantenimiento de sitios web para clientes de agencia usando WordPress, HTML, CSS y jQuery. Práctica profesional de 360 horas continuada como empleado de planta.
+\end{itemize}
 
-\section{\textbf{Proyectos universitarios}}
+\entrada{Desarrollador WordPress}{Serakin}{Viña del Mar (Freelance)}{Oct. 2016}
+\begin{itemize}
+  \item Desarrollo del sitio web corporativo del centro kinesiológico Serakin usando WordPress.
+\end{itemize}
 
- \resumeSubHeadingListStart
- 	\resumeSubheading
-      {PreUSM}{Valparaíso}
-      {Universidad Técnica Federico Santa María}{Abr. 2010 - Jul. 2010}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Desarrollo y mantenimiento de la página web del Preuniversitario Solidario PreUSM, encargado de la funcionalidad y en parte, del diseño.}
-    \item {Tecnologías utilizadas: PHP, HTML, MySQL y CSS.}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}
+\entrada{Desarrollador Frontend}{Everis}{Santiago (Híbrido)}{Oct. -- Dic. 2015}
+\begin{itemize}
+  \item Desarrollo del panel de clientes del sitio web de Consorcio usando Bootstrap y jQuery.
+\end{itemize}
 
-	\resumeSubheading
-      {Encargado de documentación y desarrollo web}{Valparaíso}
-      {Feria de Software 2008, UTFSM}{2008}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Formar parte del equipo de desarrollo del producto ``Motion Prisma'', software orientado como
-guía automatizado para buses, desarrollado bajo plataforma GNU/Linux en Python usando la biblioteca QT.
-Representando a la pre-empresa ``Phoenix`` por los ramos ''Ingeniería de Software`` y
-``Taller de Desarrollo de Software'' de la UTFSM. El evento fue realizado en la Escuela Militar,
-en Santiago.}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm} 
-    
-    \resumeSubheading
-      {Desarrollador web}{Valparaíso}
-      {Feria de Software 2007, UTFSM }{Oct. 2007}
-      \vspace{-2.0mm}
-      \resumeItemListStart
-    \item {Desarrollo de una plataforma web para un sistema
-de encuestas donde los invitados pueden votar por sus productos preferidos en distintas categorías.}
-    \item {Tecnologías utilizadas: PHP, MySQL.}
-    \item {Formaba parte del ramo Gestión de Sistemas.}
-    \resumeItemListEnd
-    
-    \vspace{-3.0mm}   
-    
-    
- \resumeSubHeadingListEnd
+% ── PROYECTOS PERSONALES ──────────────────────────────────────
+\section{Proyectos Personales}
 
+\proyecto{Bot de Indicadores Económicos (Telegram)}{Node.js, API REST}
+\begin{itemize}
+  \item Bot en Telegram que responde comandos para mostrar indicadores económicos en tiempo real usando la API de mindicador.cl.
+\end{itemize}
 
+\proyecto{Sitio web personal con portafolio}{Vue.js, Tailwind CSS, GraphQL}
+\begin{itemize}
+  \item Sitio web en desarrollo con carta de presentación, portafolio y blog. Frontend con Vue.js y Tailwind CSS, backend con GraphQL.
+\end{itemize}
 
+\proyecto{Tomython -- Temporizador Pomodoro}{Python, PyGTK, GStreamer}
+\begin{itemize}
+  \item Notificador Pomodoro de escritorio con notificaciones nativas de Linux, usando PyGTK y GStreamer.
+\end{itemize}
 
-%-----------Technical skills-----------------
-\section{\textbf{Habilidades técnicas y áreas de interés}}
- \begin{itemize}[leftmargin=0.05in, label={}]
-    \small{\item{
-     \textbf{Lenguajes}{: Java, C/C++, PHP, Python, Javascript, HTML+CSS, LaTeX. } \\
-     \textbf{Bibliotecas }{: Bibliotecas varias de Java y Python, como Numpy, Pandas, Dash, Psycopg2, etc. }\\ 
-     \textbf{Herramientas}{: Nodejs, VScode, Git, Github, Gitlab, Amazon Web Services, Docker } \\ 
-     \textbf{Frameworks}{: Django, Angular, Vue.js, Bootstrap, Tailwind } \\
-     \textbf{Servicios en la nube y bases de datos}{: MySQL, PostgreSQL, AWS Dynamo, AWS Athena, AWS Lambda, AWS Cloudformation } \\   
-     \textbf{Áreas de interés}{: Desarrollo Frontend y Backend de aplicaciones web, Desarrollo Web, Desarrollo de APIs, Sistemas Linux, Apps móviles, Infraestructura en la nube } \\
-     \textbf{Habilidades blandas}{: Proactividad, Persistencia, Resolución de problemas, Autodidacta, Adaptabilidad, Trabajo en equipo} \\
-    }}
- \end{itemize}
- \vspace{-16pt}
+\proyecto{Blog técnico en inglés}{Python, Pelican}
+\begin{itemize}
+  \item Blog estático creado con el generador Pelican en Python, publicado en inglés.
+\end{itemize}
 
+% ── EDUCACIÓN ─────────────────────────────────────────────────
+\section{Educación}
 
+\entrada{Ingeniería en Ejecución en Informática}{Universidad Técnica Federico Santa María}{Valparaíso, Chile}{2012 -- 2015}
+\textit{\textcolor{gris}{Titulado.}}
 
-%-----------Positions of Responsibility-----------------
-\begin{comment}
-\section{\textbf{Positions of Responsibility}}
-\vspace{-0.4mm}
-\resumeSubHeadingListStart
-\resumePOR{On Desk Registrations Volunteer } % Position
-    {Aarhant Cyber Week Event - RCOEM, Nagpur} %Club,Event
-    {Oct - Dec 2022} %Tenure Period \\
-    \resumeItemListStart
-    \item {Helped to attract close to 300 attendees to the event.}
-    \item {Collected over Rs. 20,000 in entry fees for different activities.}
-    \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-\vspace{-5mm}
-\end{comment}
-
-
-
-% %-----------Achievements-----------------
-% \section{\textbf{Achievements}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-% \resumePOR{Achievement } % Award
-%     {description} % Event
-%     {Event dates} %Event Year
-    
-% \resumePOR{Achievement } % Award
-%     {description} % Event
-%     {Event dates} %Event Year
-% \resumeSubHeadingListEnd
-% \vspace{-5mm}
-
-
-
-%-------------------------------------------
 \end{document}
