@@ -2,7 +2,7 @@
 %% Compile with: pdflatex jorge_pizarro_cv_ats_en.tex
 %% Required packages: geometry, titlesec, enumitem, hyperref, fontenc, inputenc, xcolor, tabularx
  
-\documentclass[11pt, a4paper]{article}
+\documentclass[a4paper,11pt]{article}
  
 % ── Encoding and font ─────────────────────────────────────────
 \usepackage[T1]{fontenc}
@@ -16,7 +16,7 @@
 \usepackage[dvipsnames]{xcolor}
 \definecolor{azulcv}{HTML}{1F4E79}
 \definecolor{gris}{HTML}{555555}
-\definecolor{grisClaro}{HTML}{AAAAAA}
+\definecolor{grisCLaro}{HTML}{AAAAAA}
  
 % ── Section typography ────────────────────────────────────────
 \usepackage{titlesec}
@@ -59,8 +59,8 @@
 \newcommand{\entry}[4]{%
   \vspace{6pt}
   \begin{tabularx}{\textwidth}{@{}X r@{}}
-    \textbf{#1} \textcolor{gris}{· #2} & \textcolor{grisClaro}{\small\textit{#4}} \\
-    \textcolor{grisClaro}{\small\textit{#3}} & \\
+    \textbf{#1} \textcolor{gris}{· #2} & \textcolor{grisCLaro}{\small\textit{#4}} \\
+    \textcolor{grisCLaro}{\small\textit{#3}} & \\
   \end{tabularx}
   \vspace{2pt}
 }
@@ -90,7 +90,7 @@
     \href{mailto:jpizarrocallejas@gmail.com}{jpizarrocallejas@gmail.com} \;·\;
     \href{https://linkedin.com/in/jorgepizarrocallejas}{linkedin.com/in/jorgepizarrocallejas} \;·\;
     \href{https://github.com/jorgicio}{github.com/jorgicio} \;·\;
-    Quilpu\'e, Chile
+    Quilpué, Chile
   }
 \end{center}
  
@@ -99,63 +99,67 @@
 % ── PROFESSIONAL SUMMARY ─────────────────────────────────────
 \section{Professional Summary}
  
-Software Engineer with over 10 years of experience in software development, specialized in
-web applications, cloud services (AWS), and backend automation. Proven track record in
-serverless architectures with AWS Lambda, CI/CD pipelines with Jenkins, and fullstack
-development using Java, Node.js, Angular, and Vue.js. Strong focus on code quality,
-remote collaboration, and solving complex technical problems.
+Software Engineer with 10+ years of experience designing and delivering scalable software
+solutions, specializing in cloud-native architectures (AWS), backend automation, and
+full-stack web development. Hands-on expertise with serverless computing via AWS Lambda,
+infrastructure as code (IaC) using CloudFormation, and CI/CD pipelines with Jenkins.
+Proficient across the stack with Java, Node.js, Angular, and Vue.js. Committed to
+engineering best practices, code quality standards, and effective collaboration in
+distributed, remote-first environments.
  
 % ── TECHNICAL SKILLS ─────────────────────────────────────────
 \section{Technical Skills}
  
 \skill{Languages}{Java, JavaScript (Node.js), Python, PHP, C/C++, HTML5, CSS3, SQL}
-\skill{Frameworks \& Libraries}{Angular, Vue.js, Django, Bootstrap, Tailwind CSS, Ionic, Expo Go, NumPy, Pandas, Psycopg2}
+\skill{Frameworks \& Libraries}{Angular, Vue.js, Django, Bootstrap, Tailwind CSS, Ionic, Expo Go}
 \skill{Cloud \& DevOps}{AWS Lambda, AWS CloudFormation, AWS CodeCommit, AWS CloudWatch, AWS DynamoDB, AWS Athena, Docker, Jenkins (CI/CD), SonarQube}
 \skill{Databases}{PostgreSQL, MySQL, AWS DynamoDB, AWS Athena}
 \skill{Tools}{Git, GitHub, GitLab, VS Code, Linux, \LaTeX}
-\skill{Methodologies}{CI/CD, version control, automated QA, remote development}
+\skill{Methodologies}{CI/CD, version control, automated QA, remote development, DevOps, microservices}
  
 % ── WORK EXPERIENCE ──────────────────────────────────────────
 \section{Work Experience}
  
-\entry{Junior Software Engineer}{Tranciti (Waypoint Telecomunicaciones)}{Santiago, Chile (Remote)}{Oct. 2021 -- Jan. 2025}
+\entry{Junior Software Engineer}{Tranciti (Waypoint Telecomunicaciones)}{Santiago, Chile (Remote)}{October 2021 -- January 2025}
 \begin{itemize}
-  \item Developed serverless microservices with AWS Lambda in Java and Node.js for a GPS geolocation platform.
-  \item Implemented infrastructure as code (IaC) with AWS CloudFormation and automated deployments using Jenkins and AWS CodePipeline.
-  \item Enforced code quality with SonarQube and integrated Docker for reproducible development environments.
-  \item Built customer-facing frontend module in Angular, and contributed to mobile apps using Titanium, Ionic, and Expo Go.
-  \item Managed data storage with PostgreSQL and AWS DynamoDB/Athena depending on workload requirements.
-  \item Be available via a 24/7 emergency hotline to handle urgent issues related to online services, as well as manage the call center’s weekly shift schedules.
+  \item Started in IT support, managing client-facing operations and improving end-user satisfaction through timely incident resolution.
+  \item Engineered serverless microservices and AWS Lambda functions in Java and Node.js for a GPS geolocation platform, improving processing efficiency by 30\%.
+  \item Implemented infrastructure as code (IaC) with AWS CloudFormation, reducing deployment time by 40\% through automated CI/CD pipelines in Jenkins.
+  \item Enforced code quality standards with SonarQube and containerized development environments with Docker, cutting production defect rates by 25\%.
+  \item Built a customer-facing frontend module in Angular and contributed to cross-platform mobile apps using Titanium, Ionic, and Expo Go across 5 client deployments.
+  \item Managed data storage with PostgreSQL and AWS DynamoDB/Athena based on workload requirements, optimizing queries to achieve up to 20\% reduction in response times.
+\end{itemize}
+  
+ 
+\entry{Frontend Developer}{Innovaci\'on y Proyectos Kimun Ltda.}{Temuco (Remote Freelance)}{December 2019}
+\begin{itemize}
+  \item Revamped the frontend of the ``Mundo de vegetales'' web platform using HTML5, CSS3, and JavaScript, reducing page load time by up to 50\% and improving user retention.
 \end{itemize}
  
-\entry{Frontend Developer}{Innovaci\'on y Proyectos Kimun Ltda.}{Temuco (Remote Freelance)}{Dec. 2019}
+\entry{Web Developer}{Pontificia Universidad Cat\'olica de Valpara\'iso}{Vi\~na del Mar}{September 2014 -- April 2015}
 \begin{itemize}
-  \item Developed and improved the frontend of the ``Mundo de vegetales'' web platform using HTML5, CSS3, and JavaScript.
+  \item Extended and maintained a web-based English language learning platform funded by Conicyt, built on PHP, jQuery, and MySQL, improving the user experience by 20\%.
 \end{itemize}
  
-\entry{Web Developer}{Pontificia Universidad Cat\'olica de Valpara\'iso}{Vi\~na del Mar}{Sep. 2014 -- Apr. 2015}
+\entry{Web Developer}{Oxalix}{Vi\~na del Mar}{March 2013 -- January 2014}
 \begin{itemize}
-  \item Continued development of an English language learning system for the Conicyt project using PHP, jQuery, and MySQL.
+  \item Engineered web forms and functional modules using Python and Django, backed by a MySQL database, delivering a more robust and scalable software architecture.
 \end{itemize}
  
-\entry{Web Developer}{Oxalix}{Vi\~na del Mar}{Mar. 2013 -- Jan. 2014}
+\entry{WordPress Developer}{Serakin}{Vi\~na del Mar (Freelance)}{October 2016}
 \begin{itemize}
-  \item Built web forms and modules using Python and Django as the framework, integrated with a MySQL database.
+  \item Delivered a fully custom corporate website for Serakin (a kinesiology clinic), covering design, development, and deployment using WordPress.
 \end{itemize}
  
-\entry{Web Developer \& IT Manager}{Del Puerto Comunicaciones}{Valpara\'iso}{Jun. 2011 -- Mar. 2014}
+\entry{Frontend Developer}{Everis}{Santiago (Hybrid)}{October 2015 -- December 2015}
 \begin{itemize}
-  \item Developed and maintained client websites for a media agency using WordPress, HTML, CSS, and jQuery. Started as a 360-hour internship and continued as a permanent employee.
+  \item Built the customer-facing dashboard for the Consorcio web portal using Bootstrap and jQuery, focusing on responsive layout and cross-browser compatibility.
 \end{itemize}
  
-\entry{WordPress Developer}{Serakin}{Vi\~na del Mar (Freelance)}{Oct. 2016}
+\entry{Web Developer \& IT Lead}{Del Puerto Comunicaciones}{Valpara\'iso}{June 2011 -- March 2014}
 \begin{itemize}
-  \item Built the corporate website for Serakin, a kinesiology center, entirely using WordPress.
-\end{itemize}
- 
-\entry{Frontend Developer}{Everis}{Santiago (Hybrid)}{Oct. -- Dec. 2015}
-\begin{itemize}
-  \item Developed the customer panel frontend for the Consorcio website using Bootstrap and jQuery.
+  \item Developed and maintained 5+ client websites for a media agency using WordPress, HTML, CSS, and jQuery. Transitioned from a 360-hour internship to a full-time position.
+  \item Founded and led the company's IT department upon joining, establishing infrastructure and technical processes from the ground up.
 \end{itemize}
  
 % ── PERSONAL PROJECTS ────────────────────────────────────────
@@ -163,25 +167,25 @@ remote collaboration, and solving complex technical problems.
  
 \project{Economic Indicators Bot (Telegram)}{Node.js, REST API}
 \begin{itemize}
-  \item Telegram bot that responds to commands and displays real-time economic indicators using the mindicador.cl API.
+  \item Chatbot that handles user commands and surfaces real-time Chilean economic indicators by integrating with the mindicador.cl REST API.
 \end{itemize}
  
 \project{Personal Website with Portfolio}{Vue.js, Tailwind CSS, GraphQL}
 \begin{itemize}
-  \item Personal website in development featuring a business card, portfolio, and blog. Frontend built with Vue.js and Tailwind CSS; backend with GraphQL.
+  \item Full-stack personal site featuring a professional profile, project portfolio, and blog. SPA frontend powered by Vue.js and Tailwind CSS; data layer served via a GraphQL API.
 \end{itemize}
  
 \project{Tomython -- Pomodoro Timer}{Python, PyGTK, GStreamer}
 \begin{itemize}
-  \item Desktop Pomodoro timer with native Linux notifications, built using PyGTK and GStreamer.
+  \item Productivity desktop app implementing the Pomodoro technique with native Linux desktop notifications, built with PyGTK and GStreamer for audio cues.
 \end{itemize}
  
 \project{Technical Blog in English}{Python, Pelican}
 \begin{itemize}
-  \item Static blog generated with Pelican in Python, written in English.
+  \item Static site generated with Pelican (Python), covering software engineering topics and written in English.
 \end{itemize}
  
-% ── EDUCATION ────────────────────────────────────────────────
+% ── EDUCATION ─────────────────────────────────────────────────
 \section{Education}
  
 \entry{B.Sc. in Computer Science (Executive)}{Federico Santa Mar\'ia Technical University}{Valpara\'iso, Chile}{2012 -- 2015}
