@@ -1,0 +1,4 @@
+PWD /home/jorgicio/Documentos/My Repos/curriculumvitae
+INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
+INPUT /home/jorgicio/Documentos/My Repos/curriculumvitae/cv-jorgepizarrocallejas-ats.tex
+OUTPUT cv-jorgepizarrocallejas-ats.log
