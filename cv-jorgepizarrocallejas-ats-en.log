@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.12)  2 APR 2026 22:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.12)  28 APR 2026 01:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**jorgepizarrocallejas-ats-en.tex
-(./jorgepizarrocallejas-ats-en.tex
+**cv-jorgepizarrocallejas-ats-en.tex
+(./cv-jorgepizarrocallejas-ats-en.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -305,8 +305,8 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count279
 \l__pdf_internal_box=\box55
 )
-(./jorgepizarrocallejas-ats-en.aux)
-\openout1 = `jorgepizarrocallejas-ats-en.aux'.
+No file cv-jorgepizarrocallejas-ats-en.aux.
+\openout1 = `cv-jorgepizarrocallejas-ats-en.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
@@ -326,7 +326,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -376,14 +375,12 @@ LaTeX Font Info:    ... okay on input line 81.
 \everyMPtoPDFconversion=\toks26
 )
 Package hyperref Info: Link coloring OFF on input line 81.
- (./jorgepizarrocallejas-ats-en.out) (./jorgepizarrocallejas-ats-en.out)
 \@outlinefile=\write3
-\openout3 = `jorgepizarrocallejas-ats-en.out'.
+\openout3 = `cv-jorgepizarrocallejas-ats-en.out'.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
 9.
-
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
@@ -425,31 +422,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--117
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [2]
-(./jorgepizarrocallejas-ats-en.aux)
+(./cv-jorgepizarrocallejas-ats-en.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `jorgepizarrocallejas-ats-en.out' has not cha
-nged.
-(rerunfilecheck)             Checksum: DF6ED9F2C722CAEB0DC4068C89F61FF6;612.
+
+
+Package rerunfilecheck Warning: File `cv-jorgepizarrocallejas-ats-en.out' has c
+hanged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `cv-jorgepizarrocallejas-ats-en.out'
+:
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  DF6ED9F2C722CAEB0DC4068C89F61FF6;612.
  ) 
 Here is how much of TeX's memory you used:
- 10150 strings out of 474972
- 156589 string characters out of 5771895
+ 10136 strings out of 474972
+ 156285 string characters out of 5771895
  1940975 words of memory out of 5000000
- 32207 multiletter control sequences out of 15000+600000
+ 32199 multiletter control sequences out of 15000+600000
  603392 words of font info for 60 fonts, out of 8000000 for 9000
  773 hyphenation exceptions out of 8191
+<<<<<<< HEAD:jorgepizarrocallejas-ats-en.log
  75i,9n,79p,253b,513s stack positions out of 10000i,1000n,20000p,200000b,200000s
+=======
+ 75i,9n,79p,256b,549s stack positions out of 10000i,1000n,20000p,200000b,200000s
+>>>>>>> origin/cv:cv-jorgepizarrocallejas-ats-en.log
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb>
+<<<<<<< HEAD:jorgepizarrocallejas-ats-en.log
 Output written on jorgepizarrocallejas-ats-en.pdf (2 pages, 164858 bytes).
+=======
+Output written on cv-jorgepizarrocallejas-ats-en.pdf (2 pages, 164242 bytes).
+>>>>>>> origin/cv:cv-jorgepizarrocallejas-ats-en.log
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 62 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  8 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
