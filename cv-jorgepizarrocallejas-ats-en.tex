@@ -1,194 +1,155 @@
-%% jorge_pizarro_cv_ats_en.tex
-%% Compile with: pdflatex jorge_pizarro_cv_ats_en.tex
-%% Required packages: geometry, titlesec, enumitem, hyperref, fontenc, inputenc, xcolor, tabularx
- 
-\documentclass[a4paper,11pt]{article}
- 
-% ── Encoding and font ─────────────────────────────────────────
+\documentclass[11pt,a4paper]{article}
+
+% ---- Real Type1 fonts (Times) + T1 encoding: avoids both the bitmap-font
+% bug (ec/pk) and the XeTeX bug that breaks inter-word spaces in the text
+% extracted from justified PDFs. ----
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
- 
-% ── Margins ───────────────────────────────────────────────────
-\usepackage[top=1.8cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}
- 
-% ── Colors ────────────────────────────────────────────────────
-\usepackage[dvipsnames]{xcolor}
-\definecolor{azulcv}{HTML}{1F4E79}
-\definecolor{gris}{HTML}{555555}
-\definecolor{grisCLaro}{HTML}{AAAAAA}
- 
-% ── Section typography ────────────────────────────────────────
+\usepackage{mathptmx}
+
+\usepackage[margin=1.8cm]{geometry}
 \usepackage{titlesec}
-\titleformat{\section}
-  {\color{azulcv}\normalfont\bfseries\large}
-  {}{0em}
-  {\MakeUppercase}
-  [{\color{azulcv}\vspace{2pt}\hrule height 0.8pt\vspace{4pt}}]
-\titlespacing*{\section}{0pt}{10pt}{4pt}
- 
-% ── Lists ─────────────────────────────────────────────────────
 \usepackage{enumitem}
-\setlist[itemize]{
-  leftmargin=1.4em,
-  topsep=2pt,
-  itemsep=2pt,
-  parsep=0pt,
-  label={\textbullet}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{darkgray}{RGB}{40,40,40}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkgray,
+    urlcolor=darkgray
 }
- 
-% ── Hyperlinks ────────────────────────────────────────────────
-\usepackage[hidelinks]{hyperref}
- 
-% ── No indent, paragraph spacing ─────────────────────────────
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{3pt}
- 
-% ── Table for right-aligned dates ─────────────────────────────
-\usepackage{tabularx}
-\usepackage{array}
- 
-% ── No page numbers ───────────────────────────────────────────
+
+\usepackage{ragged2e}
+
 \pagestyle{empty}
- 
-% ─────────────────────────────────────────────────────────────
-% Custom commands
-% ─────────────────────────────────────────────────────────────
- 
-% Work entry: {Title}{Company}{Location}{Dates}
-\newcommand{\entry}[4]{%
-  \vspace{6pt}
-  \begin{tabularx}{\textwidth}{@{}X r@{}}
-    \textbf{#1} \textcolor{gris}{· #2} & \textcolor{grisCLaro}{\small\textit{#4}} \\
-    \textcolor{grisCLaro}{\small\textit{#3}} & \\
-  \end{tabularx}
-  \vspace{2pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+% Left-aligned (non-justified) text: justification compresses inter-word
+% spacing, which is what breaks ATS/pdftotext parsing.
+\RaggedRight
+
+% Simple sections, no tables or multi-column layout (key for correct ATS parsing)
+% Note: \scshape (fake small caps) is avoided because it produces phantom
+% spaces in extracted text (e.g. "P ROFESSIONAL S UMMARY"), breaking
+% section-header detection by ATS systems.
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+\newcommand{\job}[4]{%
+    \textbf{#1} \hfill #2\\
+    \textit{#3} \hfill \textit{#4}\\[2pt]
 }
- 
-% Project entry: {Name}{Technologies}
-\newcommand{\project}[2]{%
-  \vspace{6pt}
-  \textbf{#1} \quad \textcolor{gris}{\small\textit{| #2}}
-  \vspace{2pt}
+
+\newcommand{\proj}[2]{%
+    \textbf{#1} \\
+    \textit{#2}\\[2pt]
 }
- 
-% Skill row: {Label}{Content}
-\newcommand{\skill}[2]{%
-  \textbf{#1:} #2 \\[2pt]
-}
- 
-% ─────────────────────────────────────────────────────────────
+
 \begin{document}
-% ─────────────────────────────────────────────────────────────
- 
-% ── HEADER ───────────────────────────────────────────────────
+
+% ---------- HEADER ----------
 \begin{center}
-  {\Huge\bfseries\color{azulcv} Jorge Pizarro Callejas} \\[6pt]
-  {\large\color{gris} Software Engineer \textbar{} Web Development \& Cloud} \\[6pt]
-  {\small\color{gris}
-    +56 976247629 \;·\;
-    \href{mailto:jpizarrocallejas@gmail.com}{jpizarrocallejas@gmail.com} \;·\;
-    \href{https://linkedin.com/in/jorgepizarrocallejas}{linkedin.com/in/jorgepizarrocallejas} \;·\;
-    \href{https://github.com/jorgicio}{github.com/jorgicio} \;·\;
+    {\Huge \textbf{Jorge Pizarro Callejas}}\\[4pt]
+    {\large Software Engineer · Web Development \& Cloud}\\[6pt]
+    +56 9 7624 7629 \; $\cdot$ \; \href{mailto:jpizarrocallejas@gmail.com}{jpizarrocallejas@gmail.com} \; $\cdot$ \;
+    \href{https://linkedin.com/in/jorgepizarrocallejas}{linkedin.com/in/jorgepizarrocallejas} \; $\cdot$ \;
+    \href{https://github.com/jorgicio}{github.com/jorgicio}\\[2pt]
     Quilpué, Chile
-  }
 \end{center}
- 
+
 \vspace{4pt}
- 
-% ── PROFESSIONAL SUMMARY ─────────────────────────────────────
-\section{Professional Summary}
- 
-Software Engineer with 10+ years of experience designing and delivering scalable software
-solutions, specializing in cloud-native architectures (AWS), backend automation, and
-full-stack web development. Hands-on expertise with serverless computing via AWS Lambda,
-infrastructure as code (IaC) using CloudFormation, and CI/CD pipelines with Jenkins.
-Proficient across the stack with Java, Node.js, Angular, and Vue.js. Committed to
-engineering best practices, code quality standards, and effective collaboration in
-distributed, remote-first environments.
- 
-% ── TECHNICAL SKILLS ─────────────────────────────────────────
-\section{Technical Skills}
- 
-\skill{Languages}{Java, JavaScript (Node.js), TypeScript, Python, PHP, C/C++, HTML5, CSS3, SQL}
-\skill{Frameworks \& Libraries}{Angular, Vue.js, Django, Bootstrap, Tailwind CSS, Ionic, Expo Go}
-\skill{Cloud \& DevOps}{AWS Lambda, AWS CloudFormation, AWS CodeCommit, AWS CloudWatch, AWS DynamoDB, AWS Athena, Docker, Jenkins (CI/CD), SonarQube}
-\skill{Databases}{PostgreSQL, MySQL, AWS DynamoDB, AWS Athena}
-\skill{Tools}{Git, GitHub, GitLab, VS Code, Linux, \LaTeX}
-\skill{Methodologies}{CI/CD, version control, automated QA, remote development, DevOps, microservices}
- 
-% ── WORK EXPERIENCE ──────────────────────────────────────────
-\section{Work Experience}
- 
-\entry{Junior Software Engineer}{Tranciti (Waypoint Telecomunicaciones)}{Santiago, Chile (Remote)}{October 2021 -- January 2025}
-\begin{itemize}
-  \item Started in IT support, managing client-facing operations and improving end-user satisfaction through timely incident resolution.
-  \item Engineered serverless microservices and AWS Lambda functions in Java and Node.js for a GPS geolocation platform, improving processing efficiency by 30\%.
-  \item Implemented infrastructure as code (IaC) with AWS CloudFormation, reducing deployment time by 40\% through automated CI/CD pipelines in Jenkins.
-  \item Enforced code quality standards with SonarQube and containerized development environments with Docker, cutting production defect rates by 25\%.
-  \item Built a customer-facing frontend module in Angular and contributed to cross-platform mobile apps using Titanium, Ionic, and Expo Go across 5 client deployments.
-  \item Managed data storage with PostgreSQL and AWS DynamoDB/Athena based on workload requirements, optimizing queries to achieve up to 20\% reduction in response times.
+
+% ---------- PROFESSIONAL SUMMARY ----------
+\section*{Professional Summary}
+Software Engineer with 10+ years of experience designing and delivering scalable software solutions, specializing in cloud-native architectures (AWS), backend automation, and full-stack web development. Hands-on expertise with serverless computing via AWS Lambda, infrastructure as code (IaC) using CloudFormation, and CI/CD pipelines with Jenkins. Proficient across the stack with Java, Node.js, Angular, and Vue.js. Currently transitioning into Data Engineering, building web scraping and data processing pipelines with Python, PostgreSQL, and Docker. Committed to engineering best practices, code quality standards, and effective collaboration in distributed, remote-first environments.
+
+% ---------- TECHNICAL SKILLS ----------
+\section*{Technical Skills}
+\textbf{Languages:} Java, JavaScript (Node.js), TypeScript, Python, PHP, C/C++, HTML5, CSS3, SQL\\
+\textbf{Frameworks \& Libraries:} Angular, Vue.js, Django, Bootstrap, Tailwind CSS, Ionic, Expo Go\\
+\textbf{Cloud \& DevOps:} AWS Lambda, AWS CloudFormation, AWS CodeCommit, AWS CloudWatch, AWS Glue, AWS Redshift, AWS QuickSight, Docker, Jenkins (CI/CD), SonarQube\\
+\textbf{Data \& Data Engineering:} PostgreSQL, MySQL, AWS DynamoDB, AWS Athena, ETL, web scraping (BeautifulSoup), data processing with Python\\
+\textbf{Tools:} Git, GitHub, GitLab, VS Code, Linux, \LaTeX\\
+\textbf{Methodologies:} CI/CD, version control, automated QA, remote development, DevOps, microservices
+
+% ---------- WORK EXPERIENCE ----------
+\section*{Work Experience}
+
+\job{Junior Software Engineer}{October 2021 -- January 2025}{Tranciti (Waypoint Telecomunicaciones)}{Santiago, Chile (Remote)}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Started in IT support, managing client-facing operations and improving end-user satisfaction through timely incident resolution.
+    \item Engineered serverless microservices and AWS Lambda functions in Java and Node.js for a GPS geolocation platform, improving processing efficiency by 30\%.
+    \item Implemented infrastructure as code (IaC) with AWS CloudFormation, reducing deployment time by 40\% through automated CI/CD pipelines in Jenkins.
+    \item Enforced code quality standards with SonarQube and containerized development environments with Docker, cutting production defect rates by 25\%.
+    \item Built a customer-facing frontend module in Angular and contributed to cross-platform mobile apps using Titanium, Ionic, and Expo Go across 5 client deployments.
+    \item Managed data storage with PostgreSQL and AWS DynamoDB/Athena based on workload requirements, optimizing queries to achieve up to a 20\% reduction in response times.
 \end{itemize}
-  
- 
-\entry{Frontend Developer}{Innovaci\'on y Proyectos Kimun Ltda.}{Temuco (Remote Freelance)}{December 2019}
-\begin{itemize}
-  \item Revamped the frontend of the ``Mundo de vegetales'' web platform using HTML5, CSS3, and JavaScript, reducing page load time by up to 50\% and improving user retention.
+
+\job{Frontend Developer}{December 2019}{Innovación y Proyectos Kimun Ltda.}{Temuco (Remote Freelance)}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Revamped the frontend of the ``Mundo de Vegetales'' web platform using HTML5, CSS3, and JavaScript, reducing page load time by up to 50\% and improving user retention.
 \end{itemize}
- 
-\entry{Web Developer}{Pontificia Universidad Cat\'olica de Valpara\'iso}{Vi\~na del Mar}{September 2014 -- April 2015}
-\begin{itemize}
-  \item Extended and maintained a web-based English language learning platform funded by Conicyt, built on PHP, jQuery, and MySQL, improving the user experience by 20\%.
+
+\job{WordPress Developer}{October 2016}{Serakin}{Viña del Mar (Freelance)}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Delivered a fully custom corporate website for Serakin (a kinesiology clinic), covering design, development, and deployment using WordPress.
 \end{itemize}
- 
-\entry{Web Developer}{Oxalix}{Vi\~na del Mar}{March 2013 -- January 2014}
-\begin{itemize}
-  \item Engineered web forms and functional modules using Python and Django, backed by a MySQL database, delivering a more robust and scalable software architecture.
+
+\job{Frontend Developer}{October 2015 -- December 2015}{Everis}{Santiago (Hybrid)}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Built the customer-facing dashboard for the Consorcio web portal using Bootstrap and jQuery, focusing on responsive layout and cross-browser compatibility.
 \end{itemize}
- 
-\entry{WordPress Developer}{Serakin}{Vi\~na del Mar (Freelance)}{October 2016}
-\begin{itemize}
-  \item Delivered a fully custom corporate website for Serakin (a kinesiology clinic), covering design, development, and deployment using WordPress.
+
+\job{Web Developer}{September 2014 -- April 2015}{Pontificia Universidad Católica de Valparaíso}{Viña del Mar}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Extended and maintained a web-based English language learning platform funded by Conicyt, built on PHP, jQuery, and MySQL, improving the user experience by 20\%.
 \end{itemize}
- 
-\entry{Frontend Developer}{Everis}{Santiago (Hybrid)}{October 2015 -- December 2015}
-\begin{itemize}
-  \item Built the customer-facing dashboard for the Consorcio web portal using Bootstrap and jQuery, focusing on responsive layout and cross-browser compatibility.
+
+\job{Web Developer \& IT Lead}{June 2011 -- March 2014}{Del Puerto Comunicaciones}{Valparaíso}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Developed and maintained 5+ client websites for a media agency using WordPress, HTML, CSS, and jQuery. Transitioned from a 360-hour internship to a full-time position.
+    \item Founded and led the company's IT department upon joining, establishing infrastructure and technical processes from the ground up.
 \end{itemize}
- 
-\entry{Web Developer \& IT Lead}{Del Puerto Comunicaciones}{Valpara\'iso}{June 2011 -- March 2014}
-\begin{itemize}
-  \item Developed and maintained 5+ client websites for a media agency using WordPress, HTML, CSS, and jQuery. Transitioned from a 360-hour internship to a full-time position.
-  \item Founded and led the company's IT department upon joining, establishing infrastructure and technical processes from the ground up.
+
+\job{Web Developer}{March 2013 -- January 2014}{Oxalix}{Viña del Mar}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Engineered web forms and functional modules using Python and Django, backed by a MySQL database, delivering a more robust and scalable software architecture.
 \end{itemize}
- 
-% ── PERSONAL PROJECTS ────────────────────────────────────────
-\section{Personal Projects}
- 
-\project{Economic Indicators Bot (Telegram)}{Node.js, REST API}
-\begin{itemize}
-  \item Chatbot that handles user commands and surfaces real-time Chilean economic indicators by integrating with the mindicador.cl REST API.
+
+% ---------- PERSONAL PROJECTS ----------
+\section*{Personal Projects}
+
+\proj{GetOnBoard Job Listings Scraper}{Python, BeautifulSoup, PostgreSQL, Docker}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Web scraping pipeline for structured extraction and storage of job listings, containerized with Docker and persisted in PostgreSQL. \textit{(Verify/adjust details with Jorge.)}
 \end{itemize}
- 
-\project{Personal Website with Portfolio}{Vue.js, Tailwind CSS, GraphQL}
-\begin{itemize}
-  \item Full-stack personal site featuring a professional profile, project portfolio, and blog. SPA frontend powered by Vue.js and Tailwind CSS; data layer served via a GraphQL API.
+
+\proj{Economic Indicators Bot (Telegram)}{Node.js, REST API}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Chatbot that handles user commands and surfaces real-time Chilean economic indicators by integrating with the mindicador.cl REST API.
 \end{itemize}
- 
-\project{Tomython -- Pomodoro Timer}{Python, PyGTK, GStreamer}
-\begin{itemize}
-  \item Productivity desktop app implementing the Pomodoro technique with native Linux desktop notifications, built with PyGTK and GStreamer for audio cues.
+
+\proj{Personal Website with Portfolio}{Vue.js, Tailwind CSS, GraphQL}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Full-stack personal site featuring a professional profile, project portfolio, and blog. SPA frontend powered by Vue.js and Tailwind CSS; data layer served via a GraphQL API.
 \end{itemize}
- 
-\project{Technical Blog in English}{Python, Pelican}
-\begin{itemize}
-  \item Static site generated with Pelican (Python), covering software engineering topics and written in English.
+
+\proj{Tomython -- Pomodoro Timer}{Python, PyGTK, GStreamer}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Productivity desktop app implementing the Pomodoro technique with native Linux desktop notifications, built with PyGTK and GStreamer for audio cues.
 \end{itemize}
- 
-% ── EDUCATION ─────────────────────────────────────────────────
-\section{Education}
- 
-\entry{B.Sc. in Computer Science (Executive)}{Federico Santa Mar\'ia Technical University}{Valpara\'iso, Chile}{2012 -- 2015}
-\textit{\textcolor{gris}{Graduated.}}
- 
+
+\proj{Technical Blog in English}{Python, Pelican}
+\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+    \item Static site generated with Pelican (Python), covering software engineering topics and written in English.
+\end{itemize}
+
+% ---------- EDUCATION ----------
+\section*{Education}
+\textbf{B.Sc. in Computer Science (Executive)} \hfill 2012 -- 2015\\
+\textit{Federico Santa María Technical University} \hfill \textit{Valparaíso, Chile}\\
+Graduated.
+
 \end{document}
