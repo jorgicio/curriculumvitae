@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.12)  3 JUL 2026 22:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.3.12)  3 JUL 2026 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -446,16 +446,16 @@ nged.
 Here is how much of TeX's memory you used:
  10061 strings out of 474972
  154643 string characters out of 5771895
- 1939975 words of memory out of 5000000
+ 1938975 words of memory out of 5000000
  32125 multiletter control sequences out of 15000+600000
  589715 words of font info for 76 fonts, out of 8000000 for 9000
  773 hyphenation exceptions out of 8191
- 75i,6n,79p,643b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,494b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on cv-jorgepizarrocallejas-ats.pdf (2 pages, 66275 bytes).
+Output written on cv-jorgepizarrocallejas-ats.pdf (2 pages, 66103 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream
