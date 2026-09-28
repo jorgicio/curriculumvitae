@@ -9,7 +9,7 @@
 % Nota: se omite babel[spanish] porque los patrones de guionizado en español
 % no están instalados en este entorno; no afecta el parseo ATS del texto.
 
-\usepackage[margin=1.8cm]{geometry}
+\usepackage[margin=1cm]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -40,7 +40,7 @@
 \titlespacing{\section}{0pt}{10pt}{6pt}
 
 \newcommand{\job}[4]{%
-    \textbf{#1} \hfill #2\\
+    \textbf{\underline{#1}} \hfill #2\\
     \textit{#3} \hfill \textit{#4}\\[2pt]
 }
 
@@ -48,6 +48,13 @@
     \textbf{#1} \\
     \textit{#2}\\[2pt]
 }
+
+\newcommand{\newsubsection}[1]{
+    \vspace{0em}
+    \textbf{\textit{#1}}
+    \vspace{0em}
+}
+
 
 \begin{document}
 
@@ -61,102 +68,143 @@
     Quilpué, Chile
 \end{center}
 
-\vspace{4pt}
+%\vspace{4pt}
 
 % ---------- PERFIL PROFESIONAL ----------
 \section*{Perfil Profesional}
-Ingeniero de Ejecución en Informática con más de 10 años de experiencia en desarrollo de software, especializado en aplicaciones web, servicios cloud (AWS) y automatización backend. Experiencia comprobada en arquitecturas serverless con AWS Lambda, CI/CD con Jenkins, y desarrollo fullstack con Java, Node.js, Angular y Vue.js. Orientado a la calidad del código, trabajo en equipo remoto y resolución de problemas técnicos complejos.
+Ingeniero de Ejecución en Informática titulado en la Universidad Técnica Federico Santa María, con más de 10 años de experiencia en desarrollo de software, especializado en aplicaciones web, servicios cloud (AWS) y automatización backend. Más de 3 años de experiencia comprobada en arquitecturas serverless con AWS Lambda, CI/CD con Jenkins y GitLab, y desarrollo fullstack con Java, Node.js, Angular y Vue.js. Orientado a la calidad del código, trabajo en equipo remoto y resolución de problemas técnicos complejos.\\
+Actualmente busco oportunidades en el área de DevOps o desarrollo frontend para aportar mis conocimientos y aprender nuevas tecnologías en un entorno profesional desafiante.
 
 
 % ---------- EXPERIENCIA LABORAL ----------
 \section*{Experiencia Laboral}
 
-\job{Ingeniero de Software Junior}{Octubre 2021 -- Enero 2025}{Tranciti (Waypoint Telecomunicaciones)}{Santiago, Chile (Remoto)}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Inicié mi carrera en el área de soporte de IT, gestionando la atención al cliente y mejorando la satisfacción del usuario.
+\job{Ingeniero de Software Junior}{Octubre 2021 --- Enero 2025}{Tranciti (Waypoint Telecomunicaciones)}{Santiago, Chile}
+
+\newsubsection{Funciones}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Trabajé en el área de soporte de IT, gestionando la atención al cliente. 
     \item Desarrollé microservicios y funciones serverless con AWS Lambda en Java y Node.js para una plataforma de geolocalización GPS, mejorando la eficiencia en un 30\%.
-    \item Implementé infraestructura como código (IaC) con AWS CloudFormation, reduciendo el tiempo de despliegue en un 40\% mediante automatización con Jenkins.
-    \item Gestioné calidad de código con SonarQube e integración de Docker para entornos de desarrollo reproducibles, logrando una reducción del 25\% de errores en producción.
-    \item Desarrollé un módulo frontend para clientes en Angular, y brindé soporte a apps móviles con Titanium, Ionic y Expo Go para 5 clientes, aumentando la satisfacción del cliente.
-    \item Utilicé PostgreSQL y AWS DynamoDB/Athena como motores de base de datos según el tipo de carga, optimizando consultas y reduciendo hasta en un 20\% el tiempo de respuesta.
+    \item Implementé infraestructura como código (IaC) con AWS CloudFormation.
+    \item Desarrollé un módulo frontend para clientes en Angular.
+    \item Brindé soporte a apps móviles con Titanium, Ionic y Expo Go para 5 clientes.
+    \item Utilicé PostgreSQL y AWS DynamoDB/Athena como motores de base de datos según el tipo de carga.
 \end{itemize}
 
-\job{Desarrollador Frontend}{Diciembre 2019}{Innovación y Proyectos Kimun Ltda.}{Temuco (Freelance Remoto)}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Desarrolé y realicé mejoras a nivel de frontend de la plataforma web ``Mundo de Vegetales'' utilizando HTML5, CSS3 y JavaScript, reduciendo la carga del sitio hasta en un 50\% y aumentando la retención de usuarios.
+\newsubsection{Logros}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Mejoré la satisfacción del cliente a través de la gestión del soporte.
+    \item Reduje el tiempo de despliegue en un 40\% a través de la automatización con Jenkins.
+    \item Reduje los errores de producción en un 25\% al integrar Docker y utilizar herramientas de calidad de código.
+    \item Optimicé consultas y reduje hasta un 20\% el tiempo de respuesta en los motores de base de datos.
 \end{itemize}
 
-\job{Desarrollador WordPress}{Octubre 2016}{Serakin}{Viña del Mar (Freelance)}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Desarrollé el sitio web corporativo del centro kinesiológico Serakin usando WordPress.
+\job{Desarrollador Frontend}{Diciembre 2019}{Innovación y Proyectos Kimun Ltda.}{Temuco}
+
+\newsubsection{Funciones}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Desarrollé y realicé mejoras a nivel de frontend en la plataforma web ``Mundo de Vegetales'' utilizando HTML5, CSS3 y JavaScript.
 \end{itemize}
 
-\job{Desarrollador Frontend}{Octubre 2015 -- Diciembre 2015}{Everis}{Santiago (Híbrido)}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Desarrollé el panel de clientes del sitio web de Consorcio usando Bootstrap y jQuery, facilitando la experiencia del usuario.
+\newsubsection{Logros}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Reduje la carga del sitio hasta un 50\% y aumenté la retención de usuarios.
 \end{itemize}
 
-\job{Desarrollador Web}{Septiembre 2014 -- Abril 2015}{Pontificia Universidad Católica de Valparaíso}{Viña del Mar}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Continué el desarrollo de un sistema de aprendizaje de inglés para proyecto CONICYT usando PHP, jQuery y MySQL, mejorando la experiencia de usuario en un 20\%.
+\job{Desarrollador WordPress}{Octubre 2016}{Serakin}{Viña del Mar}
+
+\newsubsection{Funciones}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Realicé el diseño y desarrollo de sitios web corporativos mediante la utilización de CMS como WordPress para la gestión y edición de los contenidos, la integración de elementos visuales y funcionalidades necesarias para el sitio web.
 \end{itemize}
 
-\job{Desarrollador Web y Jefe de Área de Informática}{Junio 2011 -- Marzo 2014}{Del Puerto Comunicaciones}{Valparaíso}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
+\newsubsection{Logros}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Mejoré la visibilidad y la accesibilidad en línea del negocio.
+    \item Facilité la actualización de la información del sitio.
+\end{itemize}
+
+\job{Desarrollador Frontend}{Octubre 2015 --- Diciembre 2015}{Everis}{Santiago}
+
+\newsubsection{Funciones}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Desarrollé el panel de clientes del sitio web de Consorcio usando Bootstrap y jQuery.
+\end{itemize}
+\newsubsection{Logros}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Facilité la experiencia del usuario a través de un diseño más intuitivo y accesible.
+\end{itemize}
+
+
+\job{Desarrollador Web}{Septiembre 2014 --- Abril 2015}{Pontificia Universidad Católica de Valparaíso}{Viña del Mar}
+\newsubsection{Funciones}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Continué el desarrollo de un sistema de aprendizaje de inglés para un proyecto CONICYT usando PHP, jQuery y MySQL.
+\end{itemize}
+
+\newsubsection{Logros}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Mejoré la experiencia de usuario en un 20\%.
+\end{itemize}
+
+\job{Desarrollador Web y Jefe de Área de Informática}{Junio 2011 --- Marzo 2014}{Del Puerto Comunicaciones}{Valparaíso}
+\newsubsection{Funciones}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
     \item Desarrollé y mantuve más de 5 sitios web para clientes de agencia usando WordPress, HTML, CSS y jQuery. Práctica profesional de 360 horas continuada como empleado de planta.
+    
+\end{itemize}
+\newsubsection{Logros}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
     \item Con mi incorporación a la empresa se creó el área de informática, la cual terminé liderando.
 \end{itemize}
 
-\job{Desarrollador Web}{Marzo 2013 -- Enero 2014}{Oxalix}{Viña del Mar}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Desarrollé formularios y módulos web con Python y Django, integrando MySQL, resultando en una arquitectura de software más robusta y escalable.
+\job{Desarrollador Web}{Marzo 2013 --- Enero 2014}{Oxalix}{Viña del Mar}
+\newsubsection{Funciones}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Desarrollé formularios y módulos web con Python y Django, integrando MySQL.
+\end{itemize}
+\newsubsection{Logros}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Logré crear una arquitectura de software más robusta y escalable para futuras actualizaciones.
 \end{itemize}
 
 % ---------- EDUCACIÓN ----------
 \section*{Educación}
-\textbf{Ingeniería en Ejecución en Informática} \hfill 2012 -- 2015\\
+\textbf{Ingeniería de Ejecución en Informática} \hfill 2012 --- 2015\\
 \textit{Universidad Técnica Federico Santa María} \hfill \textit{Valparaíso, Chile}\\
-Titulado.
+Titulado
 
 % ---------- HABILIDADES TÉCNICAS ----------
 \section*{Habilidades Técnicas}
-\textbf{Lenguajes:} Java, JavaScript (Node.js), TypeScript, Python, PHP, C/C++, HTML5, CSS3, SQL\\
-\textbf{Frameworks y librerías:} Angular, Vue.js, Django, Bootstrap, Tailwind CSS, Ionic, Expo Go, Quarkus\\
-\textbf{Cloud y DevOps:} AWS Lambda, AWS CloudFormation, AWS CodeCommit, AWS CloudWatch, AWS Glue, AWS Redshift, AWS QuickSight, Docker, Jenkins (CI/CD), SonarQube\\
-\textbf{Datos e Ingeniería de Datos:} PostgreSQL, MySQL, AWS DynamoDB, AWS Athena, ETL, web scraping (BeautifulSoup), procesamiento de datos con Python\\
-\textbf{Herramientas:} Git, GitHub, GitLab, VS Code, Linux, \LaTeX\\
-\textbf{Metodologías:} CI/CD, control de versiones, QA automatizado, desarrollo remoto, DevOps, microservicios, web scraping, Test-Driven Development (TDD), Domain-Driven Design (DDD)\\
-\textbf{Habilidades blandas:} Adaptabilidad, trabajo en equipo, resolución de problemas, orientación al cliente, comunicación efectiva
+\textbf{Lenguajes - Avanzado:} Java, JavaScript (Node.js), Python, PHP, C/C++, HTML5, CSS3, SQL. \textbf{Intermedio:} TypeScript.\\
+\textbf{Frameworks y bibliotecas - Intermedio:} Angular, Vue.js, Django, Bootstrap, Tailwind CSS, Ionic, Expo Go, Quarkus.\\
+\textbf{Cloud y DevOps - Intermedio:} AWS Lambda, AWS CloudFormation, AWS CodeCommit, AWS CloudWatch, AWS Glue, AWS Redshift, AWS QuickSight, Docker, Jenkins (CI/CD), SonarQube.\\
+\textbf{Datos e Ingeniería de Datos - Avanzado:} PostgreSQL, MySQL.  \textbf{Intermedio:} AWS DynamoDB, AWS Athena, ETL, web scraping (BeautifulSoup), procesamiento de datos con Python.\\
+\textbf{Herramientas - Avanzado:} Git, GitHub, GitLab, VS Code, Linux, \LaTeX.\\
+\textbf{Metodologías:} CI/CD, control de versiones, QA automatizado, DevOps, Test-Driven Development (TDD), Domain-Driven Design (DDD).\\
+%\textbf{Habilidades blandas:} Adaptabilidad, trabajo en equipo, resolución de problemas, orientación al cliente, comunicación efectiva
 
 % ---------- PROYECTOS PERSONALES ----------
 \section*{Proyectos Personales}
 
-\proj{Scraper de ofertas laborales GetOnBoard}{Python, BeautifulSoup, PostgreSQL, Docker}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Pipeline de web scraping para extracción y almacenamiento estructurado de ofertas laborales, contenerizado con Docker y persistido en PostgreSQL
-\end{itemize}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item \textbf{Scraper de ofertas laborales GetOnBoard} \textit{Hecho en Python con BeautifulSoup, PostgreSQL, Docker}.\\
+    Pipeline de web scraping para extracción y almacenamiento estructurado de ofertas laborales, contenerizado con Docker y persistido en PostgreSQL.
+    
+    \item \textbf{Bot de Indicadores Económicos (Telegram)} \textit{Hecho en Node.js con API REST}.\\
+    Bot en Telegram que responde comandos para mostrar indicadores económicos en tiempo real usando la API de mindicador.cl.
+    \item \textbf{Sitio Web Personal con Portafolio} \textit{Hecho en Vue.js y Tailwind CSS, backend con GraphQL}.\\
+    Sitio en desarrollo con carta de presentación, portafolio y blog.
 
-\proj{Bot de Indicadores Económicos (Telegram)}{Node.js, API REST}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Bot en Telegram que responde comandos para mostrar indicadores económicos en tiempo real usando la API de mindicador.cl.
-\end{itemize}
+    \item \textbf{Tomython -- Temporizador Pomodoro} \textit{Hecho en Python con PyGTK y GStreamer}.\\
+    Notificador Pomodoro de escritorio con notificaciones nativas de Linux, usando PyGTK y GStreamer.
+    
+    \item \textbf{Blog Técnico en Inglés} \textit{Hecho en Python con Pelican}.\\
+    Blog estático creado con el generador Pelican en Python, publicado en inglés.
 
-\proj{Sitio Web Personal con Portafolio}{Vue.js, Tailwind CSS, GraphQL}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Sitio en desarrollo con carta de presentación, portafolio y blog. Frontend con Vue.js y Tailwind CSS, backend con GraphQL.
-\end{itemize}
-
-\proj{Tomython -- Temporizador Pomodoro}{Python, PyGTK, GStreamer}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Notificador Pomodoro de escritorio con notificaciones nativas de Linux, usando PyGTK y GStreamer.
-\end{itemize}
-
-\proj{Blog Técnico en Inglés}{Python, Pelican}
-\begin{itemize}[leftmargin=*, itemsep=1pt, topsep=2pt]
-    \item Blog estático creado con el generador Pelican en Python, publicado en inglés.
 \end{itemize}
 
 \section*{Idiomas}
-Español (nativo), Inglés (escrito nivel avanzado, hablado nivel intermedio)
+Español (nativo), Inglés (escrito: nivel avanzado, hablado: nivel intermedio).
 
 \end{document}
