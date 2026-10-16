@@ -1,0 +1,144 @@
+% =====================================================================
+% CV - Jorge Pizarro Callejas
+% Template LaTeX optimizado para ATS
+% Compilar con: pdflatex CV_Jorge_Pizarro_Callejas.tex
+%
+% Decisiones de diseño pensadas para ATS:
+%   - Una sola columna, sin tablas, sin cajas flotantes, sin íconos
+%   - Fuente estándar (Times vía mathptmx) con codificación T1
+%   - Mapeo glifo->Unicode (glyphtounicode) para que tildes y ñ se
+%     extraigan bien del PDF
+%   - Encabezados de sección con nombres convencionales
+%   - Viñetas simples (itemize), texto alineado a la izquierda
+%   - Links visibles como texto plano (sin cajas de color)
+% Verificar siempre con:  pdftotext CV_Jorge_Pizarro_Callejas.pdf -
+% =====================================================================
+\documentclass[10pt,letterpaper]{article}
+
+% --- Codificación y fuentes -----------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{microtype}
+
+% --- Extracción de texto fiable -------------------------------------
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% --- Layout ----------------------------------------------------------
+\usepackage[top=1.5cm,bottom=1.5cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks,pdftitle={CV - Jorge Pizarro Callejas},pdfauthor={Jorge Pizarro Callejas}]{hyperref}
+
+\RaggedRight
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+\setlength{\emergencystretch}{3em}
+
+% --- Estilo de secciones ---------------------------------------------
+\titleformat{\section}{\large\bfseries}{}{0pt}{\MakeUppercase}[\vspace{-0.5em}\rule{\linewidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+% --- Listas ----------------------------------------------------------
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+
+% --- Macros reutilizables --------------------------------------------
+% \cvjob{Cargo}{Empresa, ciudad}{Fechas}
+\newcommand{\cvjob}[3]{%
+  \vspace{5pt}%
+  \textbf{#1} | #2 \hfill #3\par\vspace{1pt}}
+
+% \cvskill{Categoría}{Lista de habilidades}
+\newcommand{\cvskill}[2]{\item \textbf{#1:} #2}
+
+% Separador de habilidades (texto plano, extraíble)
+\newcommand{\sep}{\ \textbullet\ }
+
+\begin{document}
+
+% =====================================================================
+% ENCABEZADO
+% =====================================================================
+{\LARGE\bfseries Jorge Pizarro Callejas}\par\vspace{3pt}
+{\large\bfseries Ingeniero de Software | DevOps \& Cloud (AWS) | Linux}\par\vspace{3pt}
+Quilpué, Chile | (+56) 976247629 | \href{mailto:jpizarrocallejas@gmail.com}{jpizarrocallejas@gmail.com} | \href{https://linkedin.com/in/jorgepizarrocallejas}{linkedin.com/in/jorgepizarrocallejas} | \href{https://github.com/jorgicio}{github.com/jorgicio}\par
+
+% =====================================================================
+\section{Perfil Profesional}
+% =====================================================================
+% TODO: especificar qué repositorio de paquetes mantienes (el DOCX tenía
+% "[confirmar cuál]"). Ejemplo: "mantengo un repositorio de paquetes en AUR".
+Ingeniero de Ejecución en Informática (UTFSM) con trayectoria en desarrollo web y de software desde 2011 y más de 3 años construyendo y operando servicios en AWS (Lambda, CloudFormation) con CI/CD en Jenkins y GitLab. En Tranciti desarrollé microservicios serverless para una plataforma de geolocalización GPS, automaticé despliegues, administré la central de emergencias 24/7 y actualicé una app de monitoreo de rutas a Android 12+. Mi diferencial es Linux a nivel sysadmin: es mi sistema de uso diario, conozco distintas distribuciones y he mantenido un repositorio de paquetes de Gentoo. Busco incorporarme a un equipo de DevOps y Cloud.
+
+% =====================================================================
+\section{Logros Destacados}
+% =====================================================================
+\begin{itemize}
+  \item 40\% menos tiempo de despliegue con automatización en Jenkins y 25\% menos errores de producción con Docker y herramientas de calidad de código.
+  \item App de monitoreo de rutas en tiempo real actualizada a Android 12+, pese a dependencias obsoletas y escasa documentación.
+  \item Central de emergencias 24/7 (``teléfono rojo''): resolví una caída de madrugada del reporte de vehículos en tiempo real y capacité a la rotación en el protocolo.
+  \item Sitio web WordPress creado desde cero y operativo en menos de una semana (Serakin), con +30\% de retención de usuarios, y 30\% menos tiempo de carga en la plataforma de Kimún.
+\end{itemize}
+
+% =====================================================================
+\section{Experiencia}
+% =====================================================================
+
+\cvjob{Ingeniero de Software Junior}{Tranciti (Waypoint Telecomunicaciones)}{oct. 2021 -- ene. 2025}
+\begin{itemize}
+  % TODO: validar el 30% de eficiencia (el DOCX tenía "[validar]")
+  \item Desarrollé microservicios y funciones serverless con AWS Lambda (Java y Node.js) para una plataforma de geolocalización GPS, incluida una API para comunicarse con equipos GPS; mejoré la eficiencia 30\%.
+  \item Implementé infraestructura como código con AWS CloudFormation y automaticé los despliegues con Jenkins, reduciendo 40\% el tiempo de despliegue. Integré Docker y herramientas de calidad de código, lo que bajó 25\% los errores de producción.
+  \item Actualicé al SDK reciente de Android (Android 12+) la app móvil de monitoreo de rutas en tiempo real. Superé dependencias obsoletas, actualizaciones constantes de frameworks y escasa documentación, y validé la compatibilidad tras pruebas en un equipo de la empresa.
+  \item Administré el teléfono rojo (central de emergencias 24/7). Ante la caída a las 6 a.m. del reporte de vehículos, revisé el protocolo y los logs, reinicié el servicio, validé con el cliente y propuse cambios para evitar que se repitiera. Capacité a la rotación en el protocolo y en cómo clasificar una urgencia.
+  \item Fui de los que mejor dominaba Linux del equipo. Escribí scripts para consultas múltiples a la base de datos y optimicé consultas en PostgreSQL y DynamoDB/Athena, con hasta 20\% menos tiempo de respuesta.
+  \item Desarrollé un módulo frontend en Angular para clientes y di soporte a apps móviles (Titanium, Ionic, Expo Go) de 5 clientes.
+\end{itemize}
+
+\cvjob{Desarrollador Frontend}{Innovación y Proyectos Kimun Ltda., Temuco}{dic. 2019}
+\begin{itemize}
+  \item Rediseñé componentes del sitio ``Mundo de Vegetales'', como la barra de navegación, aplicando psicología del color en CSS. Mejoré la usabilidad, aumenté 20\% la retención y contribuí a establecer el marco de trabajo del diseño del sitio.
+  \item Optimicé la carga del sitio eliminando elementos innecesarios y refactorizando código para reducir ciclos de carga: 30\% menos tiempo de carga.
+  \item Analicé el código y entregué informes de su estado y de los procedimientos a aplicar, discutidos en las reuniones diarias.
+\end{itemize}
+
+\cvjob{Desarrollador WordPress}{Serakin, Viña del Mar}{oct. 2016}
+\begin{itemize}
+  \item Desarrollé desde cero, en backend y frontend, el sitio de un centro kinesiológico que no tenía presencia web: lo instalé en el hosting con WordPress y quedó operativo en menos de una semana.
+  \item Diseñé el sitio con un patrón definido, creando widgets, instalando plugins y un tema hijo personalizado: 30\% más de retención de usuarios.
+  \item Capacité al equipo del cliente para usar el sitio una vez terminado.
+\end{itemize}
+
+\vspace{5pt}\textbf{Experiencia previa en desarrollo web} \hfill 2011 -- 2015\par\vspace{1pt}
+\begin{itemize}
+  \item \textbf{Desarrollador Web y Jefe de Área de Informática} | Del Puerto Comunicaciones | jun. 2011 -- mar. 2014: con mi incorporación se creó el área de informática, que terminé liderando; desarrollé y mantuve más de 5 sitios para clientes (WordPress, HTML, CSS, jQuery).
+  \item \textbf{Desarrollador Web} | Oxalix | mar. 2013 -- ene. 2014: formularios y módulos con Python y Django (MySQL), con una arquitectura más robusta y escalable.
+  \item \textbf{Desarrollador Web} | Pontificia Universidad Católica de Valparaíso | sept. 2014 -- abr. 2015: sistema de aprendizaje de inglés (proyecto CONICYT) con PHP, jQuery y MySQL; mejoré 20\% la experiencia de usuario.
+  \item \textbf{Desarrollador Frontend} | Everis | oct. -- dic. 2015: panel de clientes del sitio de Consorcio con Bootstrap y jQuery.
+\end{itemize}
+
+% =====================================================================
+\section{Educación}
+% =====================================================================
+\textbf{Ingeniería de Ejecución en Informática} | Universidad Técnica Federico Santa María | 2012 -- 2015
+
+% =====================================================================
+\section{Competencias Clave}
+% =====================================================================
+\begin{itemize}
+  \cvskill{Linux y sistemas}{Linux nivel sysadmin (varias distribuciones, mantenimiento de repositorio de paquetes)\sep herramientas de CLI\sep Git\sep GitHub\sep GitLab}
+  \cvskill{Cloud y DevOps}{AWS (Lambda, EC2, CloudFormation, CloudWatch, CodeCommit, DynamoDB, Athena, Glue, Redshift, QuickSight)\sep Docker\sep Jenkins\sep CI/CD\sep SonarQube}
+  \cvskill{Lenguajes}{Java\sep JavaScript (Node.js)\sep Python\sep PHP\sep C/C++\sep SQL\sep TypeScript (intermedio)}
+  \cvskill{Frameworks}{Angular\sep Vue.js\sep Quarkus\sep Django\sep Ionic\sep Expo Go\sep Bootstrap\sep Tailwind CSS}
+  \cvskill{Datos}{PostgreSQL\sep MySQL\sep ETL\sep web scraping (BeautifulSoup)}
+  \cvskill{Datos e IA}{Ollama\sep LLMs (Qwen, GPT-oss, Llama, Deepseek)\sep Herramientas y arneses (Deepseek Harness, Opencode)}
+  \cvskill{Metodologías}{CI/CD\sep QA automatizado\sep TDD\sep DDD\sep control de versiones}\sep Desarrollo asistido por IA
+  \cvskill{Diferencial}{Linux a nivel sysadmin + AWS serverless}
+  \cvskill{Idiomas}{Español nativo | Inglés (escrito avanzado, hablado intermedio)}
+\end{itemize}
+
+\end{document}
