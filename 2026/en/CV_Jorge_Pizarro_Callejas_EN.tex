@@ -1,0 +1,144 @@
+% =====================================================================
+% CV - Jorge Pizarro Callejas (English version)
+% ATS-optimized LaTeX template
+% Compile with: pdflatex CV_Jorge_Pizarro_Callejas_EN.tex
+%
+% ATS-oriented design decisions:
+%   - Single column, no tables, no floating boxes, no icons
+%   - Standard font (Times via mathptmx) with T1 encoding
+%   - Glyph-to-Unicode mapping (glyphtounicode) so accented characters
+%     extract correctly from the PDF
+%   - Conventional section headings
+%   - Simple bullets (itemize), left-aligned text
+%   - Links shown as plain text (no colored boxes)
+% Always verify with:  pdftotext CV_Jorge_Pizarro_Callejas_EN.pdf -
+% =====================================================================
+\documentclass[10pt,letterpaper]{article}
+
+% --- Encoding and fonts ----------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{microtype}
+
+% --- Reliable text extraction ----------------------------------------
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% --- Layout ----------------------------------------------------------
+\usepackage[top=1.5cm,bottom=1.5cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks,pdftitle={CV - Jorge Pizarro Callejas},pdfauthor={Jorge Pizarro Callejas}]{hyperref}
+
+\RaggedRight
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+\setlength{\emergencystretch}{3em}
+
+% --- Section style ---------------------------------------------------
+\titleformat{\section}{\large\bfseries}{}{0pt}{\MakeUppercase}[\vspace{-0.5em}\rule{\linewidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+% --- Lists -----------------------------------------------------------
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+
+% --- Reusable macros -------------------------------------------------
+% \cvjob{Title}{Company, city}{Dates}
+\newcommand{\cvjob}[3]{%
+  \vspace{5pt}%
+  \textbf{#1} | #2 \hfill #3\par\vspace{1pt}}
+
+% \cvskill{Category}{List of skills}
+\newcommand{\cvskill}[2]{\item \textbf{#1:} #2}
+
+% Skill separator (plain text, extractable)
+\newcommand{\sep}{\ \textbullet\ }
+
+\begin{document}
+
+% =====================================================================
+% HEADER
+% =====================================================================
+{\LARGE\bfseries Jorge Pizarro Callejas}\par\vspace{3pt}
+{\large\bfseries Software Engineer | DevOps \& Cloud (AWS) | Linux}\par\vspace{3pt}
+Quilpué, Chile | (+56) 976247629 | \href{mailto:jpizarrocallejas@gmail.com}{jpizarrocallejas@gmail.com} | \href{https://linkedin.com/in/jorgepizarrocallejas}{linkedin.com/in/jorgepizarrocallejas} | \href{https://github.com/jorgicio}{github.com/jorgicio}\par
+
+% =====================================================================
+\section{Professional Summary}
+% =====================================================================
+% TODO: specify which package repository you maintain (the DOCX had
+% "[confirm which one]"). Example: "I maintain a package repository on AUR".
+Software Engineer (B.Eng. in Computer Science, UTFSM) with a web and software development career since 2011 and 3+ years building and operating services on AWS (Lambda, CloudFormation) with CI/CD on Jenkins and GitLab. At Tranciti, I built serverless microservices for a GPS geolocation platform, automated deployments, ran the 24/7 emergency operations line, and upgraded a route-monitoring mobile app to Android 12+. What sets me apart is sysadmin-level Linux: it is my daily driver, I am familiar with many distributions, and I have maintained a Gentoo package repository. I am looking to join a DevOps and Cloud team.
+
+% =====================================================================
+\section{Key Achievements}
+% =====================================================================
+\begin{itemize}
+  \item Cut deployment time by 40\% through Jenkins automation and reduced production errors by 25\% with Docker and code quality tooling.
+  \item Upgraded a real-time route-monitoring app to Android 12+ despite obsolete dependencies and sparse documentation.
+  \item 24/7 emergency line (``red telephone''): resolved an early-morning outage of the real-time vehicle reporting service and trained the on-call rotation on the protocol.
+  \item Built a WordPress site from scratch and had it live in under a week (Serakin), with 30\%+ higher user retention, and cut page load time by 30\% on the Kimún platform.
+\end{itemize}
+
+% =====================================================================
+\section{Experience}
+% =====================================================================
+
+\cvjob{Junior Software Engineer}{Tranciti (Waypoint Telecomunicaciones)}{Oct 2021 -- Jan 2025}
+\begin{itemize}
+  % TODO: validate the 30% efficiency figure (the DOCX had "[validate]")
+  \item Developed microservices and serverless functions with AWS Lambda (Java and Node.js) for a GPS geolocation platform, including an API to communicate with GPS devices; improved efficiency by 30\%.
+  \item Implemented infrastructure as code with AWS CloudFormation and automated deployments with Jenkins, reducing deployment time by 40\%. Integrated Docker and code quality tools, which lowered production errors by 25\%.
+  \item Upgraded the real-time route-monitoring mobile app to the latest Android SDK (Android 12+). Overcame obsolete dependencies, constant framework updates, and sparse documentation, and verified compatibility through testing on a company device.
+  \item Managed the ``red telephone'' (24/7 emergency line). When the vehicle reporting service went down at 6 a.m., I reviewed the protocol and logs, restarted the service, confirmed the fix with the client, and proposed changes to prevent a recurrence. Trained the rotation on the protocol and on how to classify an emergency.
+  \item Was among the team's strongest Linux users. Wrote scripts to run queries across multiple databases and optimized PostgreSQL and DynamoDB/Athena queries, with up to 20\% lower response times.
+  \item Developed a frontend module in Angular for clients and supported mobile apps (Titanium, Ionic, Expo Go) for 5 clients.
+\end{itemize}
+
+\cvjob{Frontend Developer}{Innovación y Proyectos Kimun Ltda., Temuco}{Dec 2019}
+\begin{itemize}
+  \item Redesigned components of the ``Mundo de Vegetales'' site, such as the navigation bar, applying color psychology in CSS. Improved usability, increased retention by 20\%, and helped establish the site's design framework.
+  \item Optimized site loading by removing unnecessary elements and refactoring code to reduce load cycles: 30\% shorter load time.
+  \item Analyzed the codebase and delivered reports on its status and recommended procedures, discussed in daily stand-ups.
+\end{itemize}
+
+\cvjob{WordPress Developer}{Serakin, Viña del Mar}{Oct 2016}
+\begin{itemize}
+  \item Built from scratch, backend and frontend, the website for a physiotherapy center with no web presence: installed it on the hosting with WordPress and had it live in under a week.
+  \item Designed the site around a defined pattern, creating widgets, installing plugins, and building a custom child theme: 30\% higher user retention.
+  \item Trained the client's team to manage the site once it was finished.
+\end{itemize}
+
+\vspace{5pt}\textbf{Earlier Web Development Experience} \hfill 2011 -- 2015\par\vspace{1pt}
+\begin{itemize}
+  \item \textbf{Web Developer and IT Team Lead} | Del Puerto Comunicaciones | Jun 2011 -- Mar 2014: the IT area was created when I joined, and I ended up leading it; developed and maintained 5+ client websites (WordPress, HTML, CSS, jQuery).
+  \item \textbf{Web Developer} | Oxalix | Mar 2013 -- Jan 2014: forms and modules with Python and Django (MySQL), using a more robust and scalable architecture.
+  \item \textbf{Web Developer} | Pontificia Universidad Católica de Valparaíso | Sep 2014 -- Apr 2015: English-learning system (CONICYT project) with PHP, jQuery, and MySQL; improved user experience by 20\%.
+  \item \textbf{Frontend Developer} | Everis | Oct -- Dec 2015: client dashboard for the Consorcio website with Bootstrap and jQuery.
+\end{itemize}
+
+% =====================================================================
+\section{Education}
+% =====================================================================
+\textbf{B.Eng. in Computer Science (Ingeniería de Ejecución en Informática)} | Universidad Técnica Federico Santa María | 2012 -- 2015
+
+% =====================================================================
+\section{Key Skills}
+% =====================================================================
+\begin{itemize}
+  \cvskill{Linux and Systems}{Sysadmin-level Linux (multiple distributions, package repository maintenance)\sep CLI tools\sep Git\sep GitHub\sep GitLab}
+  \cvskill{Cloud and DevOps}{AWS (Lambda, EC2, CloudFormation, CloudWatch, CodeCommit, DynamoDB, Athena, Glue, Redshift, QuickSight)\sep Docker\sep Jenkins\sep CI/CD\sep SonarQube}
+  \cvskill{Languages}{Java\sep JavaScript (Node.js)\sep Python\sep PHP\sep C/C++\sep SQL\sep TypeScript (intermediate)}
+  \cvskill{Frameworks}{Angular\sep Vue.js\sep Quarkus\sep Django\sep Ionic\sep Expo Go\sep Bootstrap\sep Tailwind CSS}
+  \cvskill{Data}{PostgreSQL\sep MySQL\sep ETL\sep web scraping (BeautifulSoup)}
+  \cvskill{Data and AI}{Ollama\sep LLMs (Qwen, GPT-oss, Llama, Deepseek)\sep Tools and harnesses (Deepseek Harness, Opencode)}
+  \cvskill{Methodologies}{CI/CD\sep automated QA\sep TDD\sep DDD\sep version control\sep AI-assisted development}
+  \cvskill{Differentiator}{Sysadmin-level Linux + AWS serverless}
+  \cvskill{Languages (spoken)}{Spanish (native)\sep English (advanced written, intermediate spoken)}
+\end{itemize}
+
+\end{document}
